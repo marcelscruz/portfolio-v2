@@ -1,14 +1,15 @@
 .header {
-  background: #fafafa;
+  /* background: var(--light-background); */
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
   padding: 20px;
+  padding-top: 50px;
 
-  :global .dark-theme :local & {
-    background: #252627;
-  }
+  /* :global .dark-theme :local & {
+    background: var(--dark-background);
+  } */
 
   a {
     text-decoration: none;
@@ -20,7 +21,8 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  width: 760px;
+  width: 1180px;
+  /* width: 760px; */
   max-width: 100%;
 }
 
@@ -43,7 +45,7 @@
   display: inline-block;
   width: 10px;
   height: 1rem;
-  background: #fe5186;
+  background: var(--yellow);
   margin-left: 5px;
   border-radius: 1px;
   animation: cursor 1s infinite;
@@ -60,7 +62,13 @@
 }
 
 @keyframes cursor {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

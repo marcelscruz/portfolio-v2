@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
-import Footer from './footer'
+// import Footer from './footer'
 
 import '../styles/layout.css'
 
@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
     mainMenu,
     showMenuItems,
     menuMoreText,
-    copyrights,
+    // copyrights,
   } = data.site.siteMetadata
 
   return (
@@ -52,8 +52,11 @@ const Layout = ({ children }) => {
         mainMenuItems={showMenuItems}
         menuMoreText={menuMoreText}
       />
-      <div className="content">{children}</div>
-      <Footer copyrights={copyrights} />
+      {/* <div className="content">{children}</div> */}
+      <div className="content">
+        <h1>under construction</h1>
+      </div>
+      {/* <Footer copyrights={copyrights} /> */}
     </div>
   )
 }

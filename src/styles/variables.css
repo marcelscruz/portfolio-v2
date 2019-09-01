@@ -7,11 +7,16 @@
   --light-border-color: #dcdcdc;
 
   /* dark theme colors */
-  --dark-background: #292a2d;
+  --dark-background: #111216;
   --dark-background-secondary: #3b3d42;
-  --dark-color: #a9a9b3;
+  --dark-color: #f2faff;
   --dark-color-secondary: #73747b;
   --dark-border-color: #4a4b50;
+
+  /* Theme agnostic */
+  --yellow: #f4bf3a;
+  --yellow-light: #ffeccc;
+  --white: #f2faff;
 
   /* variables for js, must be the same as these in @custom-media queries */
   --phoneWidth: (max-width: 684px);

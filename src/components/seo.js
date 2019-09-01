@@ -81,14 +81,13 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   keywords: [
+    'marcel cruz',
+    'web developer',
+    'javascript',
+    'react',
     'gatsby',
-    'minimal',
-    'starter',
-    'blog',
-    'theme',
-    'dark',
-    'light',
     'personal site',
+    'portfolio',
   ],
 }
 

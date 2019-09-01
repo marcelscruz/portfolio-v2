@@ -7,32 +7,32 @@ const postCSSMixins = require('postcss-mixins')
 
 module.exports = {
   siteMetadata: {
-    title: `Hello Friend`,
-    description: `A simple starter for Gatsby. That's it.`,
+    title: `marcel cruz`,
+    description: `welcome to my portfolio.`,
     copyrights: '',
-    author: `@panr`,
+    author: `@marcelcruz`,
     logo: {
       src: '',
       alt: '',
     },
-    logoText: 'hello friend',
+    logoText: 'marcel cruz',
     defaultTheme: 'dark',
     postsPerPage: 5,
-    showMenuItems: 2,
-    menuMoreText: 'Show more',
+    showMenuItems: 1,
+    menuMoreText: 'more',
     mainMenu: [
       {
-        title: 'About',
-        path: '/about',
+        title: `say hi`,
+        path: '/lets-chat',
       },
-      {
-        title: 'Showcase',
-        path: '/showcase',
-      },
-      {
-        title: 'Example',
-        path: '/example',
-      },
+      // {
+      //   title: 'Showcase',
+      //   path: '/showcase',
+      // },
+      // {
+      //   title: 'Example',
+      //   path: '/example',
+      // },
     ],
   },
   plugins: [
@@ -114,8 +114,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-hello-friend`,
-        short_name: `hello-friend`,
+        name: `marcel-cruz`,
+        short_name: `marcel-cruz`,
         start_url: `/`,
         background_color: `#292a2d`,
         theme_color: `#292a2d`,
