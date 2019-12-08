@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+// import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Post from '../components/post'
@@ -72,37 +72,37 @@ Tags.propTypes = {
   }),
 }
 
-export const postsQuery = graphql`
-  query($limit: Int!, $skip: Int!, $tag: String!) {
-    allMarkdownRemark(
-      filter: { frontmatter: { tags: { in: [$tag] } } }
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          id
-          excerpt
-          frontmatter {
-            title
-            date(formatString: "DD MMMM YYYY")
-            path
-            author
-            excerpt
-            tags
-            coverImage {
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export const postsQuery = graphql`
+//   query($limit: Int!, $skip: Int!, $tag: String!) {
+//     allMarkdownRemark(
+//       filter: { frontmatter: { tags: { in: [$tag] } } }
+//       sort: { fields: [frontmatter___date], order: DESC }
+//       limit: $limit
+//       skip: $skip
+//     ) {
+//       edges {
+//         node {
+//           id
+//           excerpt
+//           frontmatter {
+//             title
+//             date(formatString: "DD MMMM YYYY")
+//             path
+//             author
+//             excerpt
+//             tags
+//             coverImage {
+//               childImageSharp {
+//                 fluid(maxWidth: 800) {
+//                   ...GatsbyImageSharpFluid
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default Tags

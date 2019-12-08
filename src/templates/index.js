@@ -7,15 +7,15 @@ import Post from '../components/post'
 import Navigation from '../components/navigation'
 
 const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
-  const {
-    allMarkdownRemark: { edges: posts },
-  } = data
+  // const {
+  //   allMarkdownRemark: { edges: posts },
+  // } = data
 
   return (
     <>
       <SEO />
       <Layout>
-        {posts.map(({ node }) => {
+        {/* {posts.map(({ node }) => {
           const {
             id,
             excerpt: autoExcerpt,
@@ -42,7 +42,7 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
               excerpt={excerpt || autoExcerpt}
             />
           )
-        })}
+        })} */}
 
         <Navigation
           previousPath={previousPagePath}
@@ -63,37 +63,37 @@ Index.propTypes = {
   }),
 }
 
-export const postsQuery = graphql`
-  query($limit: Int!, $skip: Int!) {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//posts//" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          id
-          excerpt
-          frontmatter {
-            title
-            date(formatString: "DD MMMM YYYY")
-            path
-            author
-            excerpt
-            tags
-            coverImage {
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export const postsQuery = graphql`
+//   query($limit: Int!, $skip: Int!) {
+//     allMarkdownRemark(
+//       filter: { fileAbsolutePath: { regex: "//posts//" } }
+//       sort: { fields: [frontmatter___date], order: DESC }
+//       limit: $limit
+//       skip: $skip
+//     ) {
+//       edges {
+//         node {
+//           id
+//           excerpt
+//           frontmatter {
+//             title
+//             date(formatString: "DD MMMM YYYY")
+//             path
+//             author
+//             excerpt
+//             tags
+//             coverImage {
+//               childImageSharp {
+//                 fluid(maxWidth: 800) {
+//                   ...GatsbyImageSharpFluid
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default Index
