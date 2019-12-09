@@ -86,7 +86,7 @@ const Menu = ({
           </button>
         </>
       </div>
-      <div className={style.desktopMenuContainer}>
+      {/* <div className={style.desktopMenuContainer}>
         <ul className={style.menu}>
           <MainMenu mainMenu={mainMenu} mainMenuItems={mainMenuItems} />
           {isSubMenu ? (
@@ -112,7 +112,7 @@ const Menu = ({
             </>
           ) : null}
         </ul>
-      </div>
+      </div> */}
       <button
         className={style.themeToggle}
         onClick={onChangeTheme}
