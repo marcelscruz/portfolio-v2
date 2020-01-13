@@ -89,20 +89,22 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, 0.2);
     z-index: 10;
   }
 }
 
 .themeToggle {
   background: none;
-  color: inherit;
+  color: var(---light-background);
   border: none;
   box-shadow: none;
   line-height: 0;
   padding: 0 5px;
   appearance: none;
   outline: none;
+  position: relative;
+  top: 2px;
 }
 
 .subMenuTrigger {
@@ -123,7 +125,7 @@
   position: absolute;
   max-width: 300px;
   background: #fafafa;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   margin: 0;
   padding: 5px;
   list-style: none;

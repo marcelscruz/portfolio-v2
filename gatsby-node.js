@@ -6,9 +6,9 @@ const { toKebabCase } = require('./src/helpers')
 const pageTypeRegex = /src\/(.*?)\//
 const getType = node => node.fileAbsolutePath.match(pageTypeRegex)[1]
 
-const pageTemplate = path.resolve(`./src/templates/page.js`)
+// const pageTemplate = path.resolve(`./src/templates/page.js`)
 const indexTemplate = path.resolve(`./src/templates/index.js`)
-const tagsTemplate = path.resolve(`./src/templates/tags.js`)
+// const tagsTemplate = path.resolve(`./src/templates/tags.js`)
 
 exports.createPages = ({ actions, graphql, getNodes }) => {
   const { createPage } = actions
@@ -70,24 +70,24 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
     })
 
     // Create each markdown page and post
-    forEach(({ node }, index) => {
-      const previous = index === 0 ? null : sortedPages[index - 1].node
-      const next =
-        index === sortedPages.length - 1 ? null : sortedPages[index + 1].node
-      const isNextSameType = getType(node) === (next && getType(next))
-      const isPreviousSameType =
-        getType(node) === (previous && getType(previous))
+    // forEach(({ node }, index) => {
+    //   const previous = index === 0 ? null : sortedPages[index - 1].node
+    //   const next =
+    //     index === sortedPages.length - 1 ? null : sortedPages[index + 1].node
+    //   const isNextSameType = getType(node) === (next && getType(next))
+    //   const isPreviousSameType =
+    //     getType(node) === (previous && getType(previous))
 
-      createPage({
-        path: node.frontmatter.path,
-        component: pageTemplate,
-        context: {
-          type: getType(node),
-          next: isNextSameType ? next : null,
-          previous: isPreviousSameType ? previous : null,
-        },
-      })
-    }, sortedPages)
+    //   createPage({
+    //     path: node.frontmatter.path,
+    //     component: pageTemplate,
+    //     context: {
+    //       type: getType(node),
+    //       next: isNextSameType ? next : null,
+    //       previous: isPreviousSameType ? previous : null,
+    //     },
+    //   })
+    // }, sortedPages)
 
     // Create tag pages
     const tags = filter(
@@ -95,23 +95,23 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
       uniq(flatMap(post => post.frontmatter.tags, posts)),
     )
 
-    forEach(tag => {
-      const postsWithTag = posts.filter(
-        post =>
-          post.frontmatter.tags && post.frontmatter.tags.indexOf(tag) !== -1,
-      )
+    // forEach(tag => {
+    //   const postsWithTag = posts.filter(
+    //     post =>
+    //       post.frontmatter.tags && post.frontmatter.tags.indexOf(tag) !== -1,
+    //   )
 
-      paginate({
-        createPage,
-        items: postsWithTag,
-        component: tagsTemplate,
-        itemsPerPage: siteMetadata.postsPerPage,
-        pathPrefix: `/tag/${toKebabCase(tag)}`,
-        context: {
-          tag,
-        },
-      })
-    }, tags)
+    //   paginate({
+    //     createPage,
+    //     items: postsWithTag,
+    //     component: tagsTemplate,
+    //     itemsPerPage: siteMetadata.postsPerPage,
+    //     pathPrefix: `/tag/${toKebabCase(tag)}`,
+    //     context: {
+    //       tag,
+    //     },
+    //   })
+    // }, tags)
 
     return {
       sortedPages,

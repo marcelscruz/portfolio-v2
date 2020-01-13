@@ -1,0 +1,25 @@
+.hero {
+  display: flex;
+  height: calc(100vh - 80px); /* Viewport height - header height */
+  position: relative;
+  width: 100vw;
+}
+
+.left {
+  height: 100%;
+  width: 50%;
+}
+
+.right {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+  background-color: var(--dark-background);
+  height: 100%;
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
