@@ -15,13 +15,20 @@
 
 .left h1 {
   display: inline-block;
-  font-size: 4.5vw;
+  /* font-size: 4.5vw; */
+  font-size: 68px;
   letter-spacing: 1px;
+  line-height: 1;
   text-align: left;
 }
 
 .left h1 span {
   color: var(--yellow);
+  font-size: 78px;
+  font-weight: 500;
+  margin: 0 5px;
+  position: relative;
+  top: 5px;
 }
 
 .right {

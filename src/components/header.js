@@ -53,7 +53,7 @@ const Header = props => {
                 <img src={siteLogo.src} alt={siteLogo.alt} />
               ) : (
                 <>
-                  <span className={style.mark}>></span>
+                  {/* <span className={style.mark}>></span> */}
                   <span className={style.text}>{logoText}</span>
                   <span className={style.cursor} />
                 </>

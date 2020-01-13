@@ -8,7 +8,7 @@ function Hero() {
     <div className={style.hero}>
       <div className={style.left}>
         <h1>
-          I<span>'</span>m a web developer<span>.</span>
+          <span>&lt;</span>web developer<span>&gt;</span>
         </h1>
       </div>
 
