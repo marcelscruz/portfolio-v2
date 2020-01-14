@@ -63,7 +63,6 @@ function Hero() {
 
       <div className={style.right}>
         <img className={style.image} src={me} alt="Marcel Cruz" />
-        <span>i</span>
       </div>
     </div>
   )
