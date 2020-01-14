@@ -3,14 +3,18 @@
   height: calc(100vh - 80px); /* Viewport height - header height */
   justify-content: space-between;
   position: relative;
+  overflow: hidden;
   width: 100vw;
 }
 
 .left {
+  align-items: flex-start;
   height: 100%;
-  padding: 50px 0 50px 100px;
+  padding: 50px 100px 50px 100px;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
 }
 
 .left h1 {
@@ -19,7 +23,6 @@
   font-size: 68px;
   letter-spacing: 1px;
   line-height: 1;
-  text-align: left;
 }
 
 .left h1 span {
@@ -29,6 +32,17 @@
   margin: 0 5px;
   position: relative;
   top: 5px;
+}
+
+.left h2 {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 300;
+  width: 250px;
+}
+
+.left h2 span {
+  color: var(--yellow);
 }
 
 .right {
@@ -46,4 +60,14 @@
   position: absolute;
   height: 100%;
   object-fit: cover;
+}
+
+.socialMediaIcon {
+  font-size: 20px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.socialMediaIcon:hover {
+  color: var(--yellow);
 }
