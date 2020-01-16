@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 import Icon from './icon'
 
 import style from '../styles/menu.module.css'
+import ThemeToggle from './themeToggle'
 
 const MainMenu = ({ mainMenu, mainMenuItems, isMobileMenu }) => {
   const menu = mainMenu.slice(0)
@@ -113,14 +114,15 @@ const Menu = ({
           ) : null}
         </ul>
       </div> */}
-      <button
+      <ThemeToggle onToggle={onChangeTheme} />
+      {/* <button
         className={style.themeToggle}
         onClick={onChangeTheme}
         type="button"
         aria-label="Theme toggle"
       >
         <Icon style={{ cursor: 'pointer' }} size={24} d={toggleIcon} />
-      </button>
+      </button> */}
     </>
   )
 }
