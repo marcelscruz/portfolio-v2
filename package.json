@@ -6,9 +6,10 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "clear-cache": "rm -rf .cache & rm -rf public", 
     "develop": "env-cmd .env gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "npm run clear-cache & npm run develop",
     "serve": "gatsby serve"
   },
   "dependencies": {
