@@ -1,4 +1,6 @@
 .cache
-package.json
-public
+.git
 node_modules
+public
+package-lock.json
+package.json

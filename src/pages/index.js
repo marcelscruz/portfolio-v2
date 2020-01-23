@@ -30,7 +30,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <Head title="Paulines Mumpitz" />
+      <Head title="marcel cruz" />
 
       <Posts>
         {posts.map((post, index) => {

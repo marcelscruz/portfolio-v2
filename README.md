@@ -1,15 +1,16 @@
-# Paulines Mumpitz
+# Marcel's Portfolio V2
 
-Pauline has many thoughts, so let's her write them down somewhere.
+This is my personal portfolio, V2.
 
 ## Built with
 
+- React
 - Gatsby
 - Contentful
 
 ## Deployed on
 
-- Netlify
+- Zeit Now
 
 ## Author
 

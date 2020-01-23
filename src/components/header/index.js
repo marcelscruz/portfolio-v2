@@ -5,7 +5,7 @@ import { Container, Title } from './header.styles'
 export const Header = () => {
   return (
     <Container>
-      <Title to="/">Paulines Mumpitz</Title>
+      <Title to="/">marcel cruz</Title>
     </Container>
   )
 }

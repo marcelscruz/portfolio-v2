@@ -3,7 +3,7 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: 'Paulines Mumpitz',
+    title: 'marcel cruz',
     author: 'Marcel Cruz',
   },
   plugins: [
@@ -41,14 +41,6 @@ module.exports = {
             },
           },
         ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-root-import',
-      options: {
-        src: path.join(__dirname, 'src'),
-        components: path.join(__dirname, 'src/components'),
-        styles: path.join(__dirname, 'src/styles'),
       },
     },
     {
