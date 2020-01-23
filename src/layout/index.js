@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header } from 'components'
 import { Container, Content } from './layout.styles'
-import './global-styles.scss'
+import '../styles/global-styles.scss'
 
 export const Layout = ({ children }) => {
     return (
