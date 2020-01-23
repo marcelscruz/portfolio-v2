@@ -1,7 +1,28 @@
 {
   "printWidth": 80,
-  "semi": false,
+  "trailingComma": "all",
   "singleQuote": true,
-  "tabWidth": 2,
-  "trailingComma": "all"
+  "tabWidth": 4,
+  "semi": false,
+  "overrides": [
+    {
+      "files": "*.{css,scss}",
+      "options": {
+        "parser": "css"
+      }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "parser": "markdown"
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "html"
+      }
+    }
+  ],
+  "parser": "babel"
 }

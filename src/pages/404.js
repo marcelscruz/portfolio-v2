@@ -4,12 +4,12 @@ import Layout from 'layout'
 import { Title } from 'styles/pages.styles'
 
 const NotFound = () => {
-  return (
-    <Layout>
-      <Head title="Page not found" />
-      <Title>Page not found</Title>
-    </Layout>
-  )
+    return (
+        <Layout>
+            <Head title="Page not found" />
+            <Title>Page not found</Title>
+        </Layout>
+    )
 }
 
 export default NotFound

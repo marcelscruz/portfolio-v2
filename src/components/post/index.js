@@ -6,54 +6,58 @@ import Layout from 'layout'
 import { Container, Title, PublishedDate, Body, Separator } from './post.styles'
 
 export const query = graphql`
-  query($slug: String!) {
-    contentfulBlogPost(slug: { eq: $slug }) {
-      title
-      publishedDate(formatString: "DD/MM/YYYY")
-      body {
-        json
-      }
+    query($slug: String!) {
+        contentfulBlogPost(slug: { eq: $slug }) {
+            title
+            publishedDate(formatString: "DD/MM/YYYY")
+            body {
+                json
+            }
+        }
     }
-  }
 `
 
 export const Post = props => {
-  const options = {
-    renderNode: {
-      'embedded-asset-block': node => {
-        const alt = node.data.target.fields.title['en-US']
-        const url = node.data.target.fields.file['en-US'].url
+    const options = {
+        renderNode: {
+            'embedded-asset-block': node => {
+                const alt = node.data.target.fields.title['en-US']
+                const url = node.data.target.fields.file['en-US'].url
 
-        return <img alt={alt} src={url} />
-      },
-    },
-    renderText: text => {
-      return text.split('\n').reduce((children, textSegment, index) => {
-        return [...children, index > 0 && <br key={index} />, textSegment]
-      }, [])
-    },
-  }
+                return <img alt={alt} src={url} />
+            },
+        },
+        renderText: text => {
+            return text.split('\n').reduce((children, textSegment, index) => {
+                return [
+                    ...children,
+                    index > 0 && <br key={index} />,
+                    textSegment,
+                ]
+            }, [])
+        },
+    }
 
-  return (
-    <Layout>
-      <Head title={props.data.contentfulBlogPost.title} />
+    return (
+        <Layout>
+            <Head title={props.data.contentfulBlogPost.title} />
 
-      <Separator />
-      <Container>
-        <Title>{props.data.contentfulBlogPost.title}</Title>
-        <PublishedDate>
-          {props.data.contentfulBlogPost.publishedDate}
-        </PublishedDate>
-        <Body>
-          {documentToReactComponents(
-            props.data.contentfulBlogPost.body.json,
-            options,
-          )}
-        </Body>
-      </Container>
-      <Separator />
-    </Layout>
-  )
+            <Separator />
+            <Container>
+                <Title>{props.data.contentfulBlogPost.title}</Title>
+                <PublishedDate>
+                    {props.data.contentfulBlogPost.publishedDate}
+                </PublishedDate>
+                <Body>
+                    {documentToReactComponents(
+                        props.data.contentfulBlogPost.body.json,
+                        options,
+                    )}
+                </Body>
+            </Container>
+            <Separator />
+        </Layout>
+    )
 }
 
 export default Post

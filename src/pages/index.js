@@ -3,52 +3,54 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { Head } from 'components'
 import Layout from 'layout'
 import {
-  Posts,
-  Post,
-  Link,
-  Title,
-  PublishedDate,
-  Separator,
+    Posts,
+    Post,
+    Link,
+    Title,
+    PublishedDate,
+    Separator,
 } from 'styles/pages.styles'
 
 const Home = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
-        edges {
-          node {
-            title
-            slug
-            publishedDate(formatString: "DD/MM/YYYY")
-          }
+    const data = useStaticQuery(graphql`
+        query {
+            allContentfulBlogPost(
+                sort: { fields: publishedDate, order: DESC }
+            ) {
+                edges {
+                    node {
+                        title
+                        slug
+                        publishedDate(formatString: "DD/MM/YYYY")
+                    }
+                }
+            }
         }
-      }
-    }
-  `)
+    `)
 
-  const posts = data.allContentfulBlogPost.edges
+    const posts = data.allContentfulBlogPost.edges
 
-  return (
-    <Layout>
-      <Head title="marcel cruz" />
+    return (
+        <Layout>
+            <Head title="marcel cruz" />
 
-      <Posts>
-        {posts.map((post, index) => {
-          const { title, slug, publishedDate } = post.node
+            <Posts>
+                {posts.map((post, index) => {
+                    const { title, slug, publishedDate } = post.node
 
-          return (
-            <Post key={index + title}>
-              <Link to={`/${slug}`}>
-                <Title>{title}</Title>
-                <PublishedDate>{publishedDate}</PublishedDate>
-              </Link>
-              {index !== posts.length - 1 && <Separator />}
-            </Post>
-          )
-        })}
-      </Posts>
-    </Layout>
-  )
+                    return (
+                        <Post key={index + title}>
+                            <Link to={`/${slug}`}>
+                                <Title>{title}</Title>
+                                <PublishedDate>{publishedDate}</PublishedDate>
+                            </Link>
+                            {index !== posts.length - 1 && <Separator />}
+                        </Post>
+                    )
+                })}
+            </Posts>
+        </Layout>
+    )
 }
 
 export default Home
