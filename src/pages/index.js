@@ -2,14 +2,6 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Head } from 'components'
 import Layout from 'layout'
-import {
-    Posts,
-    Post,
-    Link,
-    Title,
-    PublishedDate,
-    Separator,
-} from 'styles/pages.styles'
 
 const Home = () => {
     const data = useStaticQuery(graphql`
@@ -34,7 +26,7 @@ const Home = () => {
         <Layout>
             <Head title="marcel cruz" />
 
-            <Posts>
+            {/* <Posts>
                 {posts.map((post, index) => {
                     const { title, slug, publishedDate } = post.node
 
@@ -48,7 +40,7 @@ const Home = () => {
                         </Post>
                     )
                 })}
-            </Posts>
+            </Posts> */}
         </Layout>
     )
 }
