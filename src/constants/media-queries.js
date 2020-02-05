@@ -1,6 +1,11 @@
+import sizes from './sizes'
+
+const { phoneWidth, tabletWidth, maxOverallWidth } = sizes
+
 export const mediaQueries = {
-    phone: 'max-width: 684px',
-    tablet: 'max-width: 900px',
+    phoneMediaQuery: `max-width: ${phoneWidth}`,
+    tabletMediaQuery: `max-width: ${tabletWidth}`,
+    maxOverallMediaQuery: `max-width: ${maxOverallWidth}`,
 }
 
 export default mediaQueries

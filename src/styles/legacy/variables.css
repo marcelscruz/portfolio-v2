@@ -1,22 +1,26 @@
 :root {
     --light-primary: #ffffff;
+    --light-primary-hex: 255, 255, 255;
     --light-secondary: #eaeaea;
     --light-tertiary: #999;
     --light-border-color: #dcdcdc;
 
     --dark-primary: #111216;
+    --dark-primary-hex: 17, 18, 22;
     --dark-secondary: #3b3d42;
     --dark-tertiary: #73747b;
     --dark-border-color: #4a4b50;
 
     /* Theme agnostic */
     --yellow: #f4bf3a;
+    --yellow-hex: 244, 191, 58;
     --yellow-light: #ffeccc;
     --white: #f2faff;
 
-    /* Media queries */
-    --phoneWidth: (max-width: 684px);
-    --tabletWidth: (max-width: 900px);
+    /* Sizes */
+    --phoneWidth: 684px;
+    --tabletWidth: 900px;
+    --maxWidth: 1400px;
 
     /* Transitions */
     --backgroundTransition: background 0.3s;
