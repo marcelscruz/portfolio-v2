@@ -1,12 +1,12 @@
-body {
-    --light-background: #ffffff;
-    --light-background-secondary: #eaeaea;
-    --light-color-secondary: #999;
+:root {
+    --light-primary: #ffffff;
+    --light-secondary: #eaeaea;
+    --light-tertiary: #999;
     --light-border-color: #dcdcdc;
 
-    --dark-background: #111216;
-    --dark-background-secondary: #3b3d42;
-    --dark-color-secondary: #73747b;
+    --dark-primary: #111216;
+    --dark-secondary: #3b3d42;
+    --dark-tertiary: #73747b;
     --dark-border-color: #4a4b50;
 
     /* Theme agnostic */
@@ -19,13 +19,16 @@ body {
     --tabletWidth: (max-width: 900px);
 
     /* Transitions */
+    --backgroundTransition: background 0.3s;
     --colorTransition: color 0.3s;
 
     /* Dark theme */
-    --primary: #111216;
+    --primary: var(--dark-primary);
+    --secondary: var(--light-primary);
 }
 
-body.light-mode {
+:root.light-mode {
     /* Light theme */
-    --primary: #ffffff;
+    --primary: var(--light-primary);
+    --secondary: var(--dark-primary);
 }

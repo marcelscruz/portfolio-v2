@@ -28,11 +28,13 @@ export function useDarkMode() {
     useEffect(
         () => {
             const className = 'light-mode'
-            const element = window.document.body
+
+            // This can be accessed on CSS as :root
+            const root = document.getElementsByTagName('html')[0]
             if (enabled) {
-                element.classList.remove(className)
+                root.classList.remove(className)
             } else {
-                element.classList.add(className)
+                root.classList.add(className)
             }
         },
         [enabled], // Only re-call effect when value changes
