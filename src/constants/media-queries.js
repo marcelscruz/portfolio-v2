@@ -5,7 +5,7 @@ const { phoneWidth, tabletWidth, maxOverallWidth } = sizes
 export const mediaQueries = {
     phoneMediaQuery: `max-width: ${phoneWidth}`,
     tabletMediaQuery: `max-width: ${tabletWidth}`,
-    maxOverallMediaQuery: `max-width: ${maxOverallWidth}`,
+    maxOverallWidthMediaQuery: `max-width: ${maxOverallWidth}`,
 }
 
 export default mediaQueries

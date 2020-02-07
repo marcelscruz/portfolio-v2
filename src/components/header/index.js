@@ -1,11 +1,14 @@
 import React from 'react'
 
-import { Container, Title } from './header.styles'
+import { Container, InnerContainer, Title, Cursor } from './header.styles'
 
 export const Header = () => {
     return (
         <Container>
-            <Title to="/">marcel cruz</Title>
+            <InnerContainer>
+                <Title to="/">marcel cruz</Title>
+                <Cursor />
+            </InnerContainer>
         </Container>
     )
 }

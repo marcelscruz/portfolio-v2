@@ -1,14 +1,50 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Link } from 'gatsby'
+import { sizes } from 'constants'
 
-export const Container = styled.div`
-    padding: 0 0 3rem;
+const { maxOverallWidth } = sizes
+
+export const Container = styled.header`
+    background: var(--dark-primary);
+    height: 80px;
+`
+
+export const InnerContainer = styled.div`
+    align-items: center;
+    display: flex;
+    flex: 1;
+    height: 100%;
+    margin: 0 auto;
+    max-width: ${maxOverallWidth};
+    padding: 0 100px;
 `
 
 export const Title = styled(Link)`
-    color: #e44c60;
-    font-size: 1.5rem;
-    font-family: 'Muli', sans-serif;
-    font-weight: 900;
+    color: var(--light-primary);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.7px;
     text-decoration: none;
+`
+
+const blinkingCursor = keyframes`
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+`
+
+export const Cursor = styled.span`
+    display: inline-block;
+    width: 10px;
+    height: 0.9rem;
+    background: var(--yellow);
+    margin-left: 5px;
+    border-radius: 1px;
+    animation: ${blinkingCursor} 1s infinite;
 `
