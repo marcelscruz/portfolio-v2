@@ -34,7 +34,6 @@ export const Title = styled(Link)`
     color: var(--light-primary);
     font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 0.7px;
     text-decoration: none;
 `
 

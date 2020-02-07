@@ -14,6 +14,7 @@ module.exports = {
                 src: path.join(__dirname, 'src'),
                 components: path.join(__dirname, 'src/components'),
                 constants: path.join(__dirname, 'src/constants'),
+                fonts: path.join(__dirname, 'src/static/fonts'),
                 hooks: path.join(__dirname, 'src/hooks'),
                 layout: path.join(__dirname, 'src/layout'),
                 pages: path.join(__dirname, 'src/pages'),
