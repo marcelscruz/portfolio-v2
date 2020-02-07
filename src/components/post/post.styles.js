@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     color: #493738;
-    font-family: 'Montserrat', sans-serif;
 `
 
 export const Title = styled.h1`

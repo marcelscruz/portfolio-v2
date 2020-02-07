@@ -1,16 +1,23 @@
 import React from 'react'
 import { Header } from 'components'
+import { GlobalStyle } from 'styles'
 import { Container, Content } from './layout.styles'
-import '../styles/global-styles.scss'
+import { useDarkMode } from 'hooks'
 
 export const Layout = ({ children }) => {
+    const [isDarkModeOn, setIsDarkModeOn] = useDarkMode()
+
     return (
-        <Container>
-            <Content>
-                <Header />
-                {children}
-            </Content>
-        </Container>
+        <>
+            <GlobalStyle />
+            <Container>
+                <Header
+                    isDarkModeOn={isDarkModeOn}
+                    setIsDarkModeOn={setIsDarkModeOn}
+                />
+                <Content>{children}</Content>
+            </Container>
+        </>
     )
 }
 

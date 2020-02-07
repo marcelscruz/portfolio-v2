@@ -14,9 +14,20 @@ export const InnerContainer = styled.div`
     display: flex;
     flex: 1;
     height: 100%;
+    justify-content: space-between;
     margin: 0 auto;
     max-width: ${maxOverallWidth};
     padding: 0 100px;
+`
+
+export const LeftContainer = styled.div`
+    align-items: center;
+    display: flex;
+`
+
+export const RightContainer = styled.div`
+    align-items: center;
+    display: flex;
 `
 
 export const Title = styled(Link)`
