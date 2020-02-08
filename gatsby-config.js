@@ -1,4 +1,3 @@
-// gatsby-config.js
 const path = require('path')
 
 module.exports = {
@@ -11,13 +10,15 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-root-import',
             options: {
-                src: path.join(__dirname, 'src'),
+                assets: path.join(__dirname, 'src/assets'),
                 components: path.join(__dirname, 'src/components'),
                 constants: path.join(__dirname, 'src/constants'),
-                fonts: path.join(__dirname, 'src/static/fonts'),
+                fonts: path.join(__dirname, 'src/assets/fonts'),
                 hooks: path.join(__dirname, 'src/hooks'),
+                images: path.join(__dirname, 'src/assets/images'),
                 layout: path.join(__dirname, 'src/layout'),
                 pages: path.join(__dirname, 'src/pages'),
+                src: path.join(__dirname, 'src'),
                 styles: path.join(__dirname, 'src/styles'),
             },
         },
