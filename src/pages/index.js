@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Head } from 'components'
 import Layout from 'layout'
 
 const Home = () => {
@@ -24,8 +23,6 @@ const Home = () => {
 
     return (
         <Layout>
-            <Head title="marcel cruz" />
-
             {/* <Posts>
                 {posts.map((post, index) => {
                     const { title, slug, publishedDate } = post.node

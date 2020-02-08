@@ -1,5 +1,4 @@
 export * from './footer'
-export * from './head'
 export * from './header'
 export * from './post'
 export * from './theme-toggle'

@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { Head } from 'components'
+import { Helmet } from 'react-helmet'
 import Layout from 'layout'
 import { Container, Title, PublishedDate, Body, Separator } from './post.styles'
 
@@ -40,7 +40,7 @@ export const Post = props => {
 
     return (
         <Layout>
-            <Head title={props.data.contentfulBlogPost.title} />
+            <Helmet title={props.data.contentfulBlogPost.title} />
 
             <Separator />
             <Container>
