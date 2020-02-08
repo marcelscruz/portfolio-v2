@@ -28,8 +28,8 @@ const variables = `
         --maxWidth: ${maxOverallWidth};
 
         /* Transitions */
-        --backgroundTransition: background 0.3s;
-        --colorTransition: color 0.3s;
+        --backgroundTransition: background 0.5s;
+        --colorTransition: color 0.5s;
 
         /* Dark theme */
         --primary: var(--dark-primary);

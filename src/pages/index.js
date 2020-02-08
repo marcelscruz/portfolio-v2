@@ -1,43 +1,65 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faGithub,
+    faLinkedin,
+    faTwitter,
+} from '@fortawesome/free-brands-svg-icons'
 import Layout from 'layout'
+import {
+    Container,
+    LeftPanel,
+    Title,
+    TitleHighlight,
+    Subtitle,
+    RightPanel,
+    Image,
+    SocialMediaIcon,
+} from 'components/home/home.styles'
+import me from 'images/me.jpg'
 
 const Home = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            allContentfulBlogPost(
-                sort: { fields: publishedDate, order: DESC }
-            ) {
-                edges {
-                    node {
-                        title
-                        slug
-                        publishedDate(formatString: "DD/MM/YYYY")
-                    }
-                }
-            }
-        }
-    `)
-
-    const posts = data.allContentfulBlogPost.edges
-
     return (
         <Layout>
-            {/* <Posts>
-                {posts.map((post, index) => {
-                    const { title, slug, publishedDate } = post.node
+            <Container>
+                <LeftPanel>
+                    <div>
+                        <Title>
+                            <TitleHighlight noMarginLeft>&lt;</TitleHighlight>
+                            web
+                            <br />
+                            developer
+                            <TitleHighlight noMarginRight>&gt;</TitleHighlight>
+                        </Title>
 
-                    return (
-                        <Post key={index + title}>
-                            <Link to={`/${slug}`}>
-                                <Title>{title}</Title>
-                                <PublishedDate>{publishedDate}</PublishedDate>
-                            </Link>
-                            {index !== posts.length - 1 && <Separator />}
-                        </Post>
-                    )
-                })}
-            </Posts> */}
+                        <br />
+
+                        <Subtitle>
+                            I<span>'</span>m a full stack developer
+                            <span>,</span> writing clean and efficient code
+                            <span>.</span>
+                        </Subtitle>
+                    </div>
+
+                    <div>
+                        <SocialMediaIcon href="https://www.linkedin.com/in/marcelscruz/">
+                            <FontAwesomeIcon icon={faLinkedin} />
+                        </SocialMediaIcon>
+
+                        <SocialMediaIcon href="https://github.com/marcelscruz">
+                            <FontAwesomeIcon icon={faGithub} />
+                        </SocialMediaIcon>
+
+                        <SocialMediaIcon href="https://twitter.com/marcelcruz">
+                            <FontAwesomeIcon icon={faTwitter} />
+                        </SocialMediaIcon>
+                    </div>
+                </LeftPanel>
+
+                <RightPanel>
+                    <Image src={me} alt="Marcel Cruz" />
+                </RightPanel>
+            </Container>
         </Layout>
     )
 }

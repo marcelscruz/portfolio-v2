@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-text-size-adjust: 100%;
     }
     body {
+        background: var(--primary);
         margin: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -233,7 +234,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
     }
     h1 {
         margin-block-start: 0;
@@ -245,7 +246,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        /* margin-bottom: 1.45rem; */
+        margin-bottom: 1.45rem;
         color: inherit;
         /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, */
         /* Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
@@ -264,7 +265,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        /* margin-bottom: 1.45rem; */
+        margin-bottom: 1.45rem;
         color: inherit;
         /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, */
         /* Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
@@ -283,7 +284,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        /* margin-bottom: 1.45rem; */
+        margin-bottom: 1.45rem;
         color: inherit;
         /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, */
         /* Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
@@ -302,7 +303,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        /* margin-bottom: 1.45rem; */
+        margin-bottom: 1.45rem;
         color: inherit;
         /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, */
         /* Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
@@ -321,7 +322,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        /* margin-bottom: 1.45rem; */
+        margin-bottom: 1.45rem;
         color: inherit;
         /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, */
         /* Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
@@ -340,7 +341,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        /* margin-bottom: 1.45rem; */
+        margin-bottom: 1.45rem;
         color: inherit;
         /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, */
         /* Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
@@ -357,7 +358,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
     }
     ul {
         margin-left: 1.45rem;
@@ -367,7 +368,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
         list-style-position: outside;
         list-style-image: none;
     }
@@ -379,7 +380,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
         list-style-position: outside;
         list-style-image: none;
     }
@@ -391,7 +392,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
     }
     dd {
         margin-left: 0;
@@ -401,7 +402,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
     }
     p {
         margin-left: 0;
@@ -411,7 +412,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
     }
     figure {
         margin-left: 0;
@@ -421,13 +422,13 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
     }
     pre {
         margin-left: 0;
         margin-right: 0;
         margin-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
         font-size: 0.85rem;
         line-height: 1.42;
         background: hsla(0, 0%, 0%, 0.04);
@@ -444,7 +445,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
         font-size: 1rem;
         line-height: 1.45rem;
         border-collapse: collapse;
@@ -458,7 +459,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
     }
     blockquote {
         margin-left: 1.45rem;
@@ -468,7 +469,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
     }
     form {
         margin-left: 0;
@@ -478,7 +479,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
     }
     noscript {
         margin-left: 0;
@@ -488,7 +489,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
     }
     iframe {
         margin-left: 0;
@@ -498,7 +499,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
     }
     hr {
         margin-left: 0;
@@ -521,7 +522,7 @@ export const GlobalStyle = createGlobalStyle`
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-        margin-bottom: 1.45rem;
+        /* margin-bottom: 1.45rem; */
     }
     b {
         font-weight: bold;
