@@ -33,13 +33,17 @@ const variables = `
 
         /* Dark theme */
         --primary: var(--dark-primary);
+        --primary-hex: var(--dark-primary-hex);
         --secondary: var(--light-primary);
+        --secondary-hex: var(--light-primary-hex);
     }
 
     :root.light-mode {
         /* Light theme */
         --primary: var(--light-primary);
+        --primary-hex: var(--light-primary-hex);
         --secondary: var(--dark-primary);
+        --secondary-hex: var(--dark-primary-hex);
     }
 `
 

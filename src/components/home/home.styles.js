@@ -4,7 +4,6 @@ export const Container = styled.div`
     display: flex;
     height: calc(100vh - 80px); /* Viewport height - header height */
     justify-content: space-between;
-    overflow: hidden;
     position: relative;
     width: 100vw;
 `
@@ -26,6 +25,7 @@ export const Title = styled.h1`
     letter-spacing: 1px;
     line-height: 1;
     margin: 50px 0;
+    text-shadow: rgba(var(--light-primary-hex), 0.2) 0px 0px 20px;
     transition: var(--colorTransition);
 `
 
@@ -35,6 +35,7 @@ export const TitleHighlight = styled.span`
     font-weight: 500;
     margin: 0 5px;
     position: relative;
+    text-shadow: rgba(var(--yellow-hex), 0.4) 0px 0px 20px;
     top: 5px;
 
     ${({ noMarginLeft }) =>
