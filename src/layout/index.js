@@ -13,6 +13,7 @@ export const Layout = ({ children }) => {
         <>
             <GlobalStyle />
             <Helmet
+                title="marcel cruz"
                 link={[
                     {
                         rel: 'icon',
