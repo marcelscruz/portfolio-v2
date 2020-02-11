@@ -19,6 +19,11 @@ import {
 import me from 'images/me.jpg'
 
 const Home = () => {
+    const svgSize = {
+        height: '18px',
+        width: '18px',
+    }
+
     return (
         <Layout>
             <Container>
@@ -43,15 +48,18 @@ const Home = () => {
 
                     <div>
                         <SocialMediaIcon href="https://www.linkedin.com/in/marcelscruz/">
-                            <FontAwesomeIcon icon={faLinkedin} />
+                            <FontAwesomeIcon
+                                style={svgSize}
+                                icon={faLinkedin}
+                            />
                         </SocialMediaIcon>
 
                         <SocialMediaIcon href="https://github.com/marcelscruz">
-                            <FontAwesomeIcon icon={faGithub} />
+                            <FontAwesomeIcon style={svgSize} icon={faGithub} />
                         </SocialMediaIcon>
 
                         <SocialMediaIcon href="https://twitter.com/marcelcruz">
-                            <FontAwesomeIcon icon={faTwitter} />
+                            <FontAwesomeIcon style={svgSize} icon={faTwitter} />
                         </SocialMediaIcon>
                     </div>
                 </LeftPanel>
