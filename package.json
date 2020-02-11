@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "env-cmd .env gatsby build",
     "clear-cache": "rm -rf .cache & rm -rf public",
     "develop": "env-cmd .env gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
