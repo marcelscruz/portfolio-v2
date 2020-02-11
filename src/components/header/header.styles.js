@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import { Link } from 'gatsby'
-import { sizes } from 'constants'
+import { sizes } from 'constants/sizes'
 
 const { maxOverallWidth } = sizes
 

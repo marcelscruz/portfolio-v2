@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { sizes } from 'constants'
+import { sizes } from 'constants/sizes'
 
 const { maxOverallWidth } = sizes
 

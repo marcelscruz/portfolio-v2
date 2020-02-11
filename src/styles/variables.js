@@ -1,4 +1,4 @@
-import { sizes } from 'constants'
+import { sizes } from 'constants/sizes'
 
 const { phoneWidth, tabletWidth, maxOverallWidth } = sizes
 
