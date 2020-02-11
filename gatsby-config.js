@@ -22,6 +22,18 @@ module.exports = {
                 styles: path.join(__dirname, 'src/styles'),
             },
         },
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `marcel cruz`,
+                short_name: `marcel cruz`,
+                start_url: `/`,
+                background_color: `#111216`,
+                theme_color: `#f4bf3a`,
+                display: `standalone`,
+                icon: 'src/assets/images/keyboard.png',
+            },
+        },
         'gatsby-plugin-react-helmet',
         {
             resolve: 'gatsby-source-contentful',

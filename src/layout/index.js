@@ -4,7 +4,6 @@ import { Header } from 'components'
 import { GlobalStyle } from 'styles'
 import { Container, Content } from './layout.styles'
 import { useDarkMode } from 'hooks'
-import favicon from 'images/favicon.ico'
 
 export const Layout = ({ children }) => {
     const [isDarkModeOn, setIsDarkModeOn] = useDarkMode()
@@ -12,15 +11,7 @@ export const Layout = ({ children }) => {
     return (
         <>
             <GlobalStyle />
-            <Helmet
-                title="marcel cruz"
-                link={[
-                    {
-                        rel: 'icon',
-                        href: favicon,
-                    },
-                ]}
-            />
+            <Helmet title="marcel cruz" />
             <Container>
                 <Header
                     isDarkModeOn={isDarkModeOn}
