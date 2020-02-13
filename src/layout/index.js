@@ -1,11 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { Header } from 'components'
 import { GlobalStyle } from 'styles'
 import { Container, Content } from './layout.styles'
 import { useDarkMode } from 'hooks'
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, hasFooter }) => {
     const [isDarkModeOn, setIsDarkModeOn] = useDarkMode()
 
     return (
@@ -18,9 +19,15 @@ export const Layout = ({ children }) => {
                     setIsDarkModeOn={setIsDarkModeOn}
                 />
                 <Content>{children}</Content>
+                {hasFooter && <h2>Footer</h2>}
             </Container>
         </>
     )
 }
 
 export default Layout
+
+Layout.propTypes = {
+    children: PropTypes.node.isRequired,
+    hasFooter: PropTypes.bool,
+}

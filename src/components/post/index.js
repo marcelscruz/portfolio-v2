@@ -39,7 +39,7 @@ export const Post = props => {
     }
 
     return (
-        <Layout>
+        <Layout hasFooter>
             <Helmet title={props.data.contentfulBlogPost.title} />
 
             <Separator />
