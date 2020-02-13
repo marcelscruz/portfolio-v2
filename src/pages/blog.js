@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import Layout from 'layout'
 
 const Home = () => {
@@ -23,21 +23,19 @@ const Home = () => {
 
     return (
         <Layout>
-            {/* <Posts>
-                {posts.map((post, index) => {
-                    const { title, slug, publishedDate } = post.node
+            {posts.map((post, index) => {
+                const { title, slug, publishedDate } = post.node
 
-                    return (
-                        <Post key={index + title}>
-                            <Link to={`/${slug}`}>
-                                <Title>{title}</Title>
-                                <PublishedDate>{publishedDate}</PublishedDate>
-                            </Link>
-                            {index !== posts.length - 1 && <Separator />}
-                        </Post>
-                    )
-                })}
-            </Posts> */}
+                return (
+                    <div key={index + title}>
+                        <Link to={`/blog/${slug}`}>
+                            <p>
+                                {title} - {publishedDate}
+                            </p>
+                        </Link>
+                    </div>
+                )
+            })}
         </Layout>
     )
 }
