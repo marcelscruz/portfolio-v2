@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Helmet } from 'react-helmet'
-import Layout from 'layout'
+import Layout from 'layout/layout'
 import { Container, Title, PublishedDate, Body, Separator } from './post.styles'
 
 export const query = graphql`

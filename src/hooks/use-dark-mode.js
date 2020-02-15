@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import useLocalStorage from './useLocalStorage'
+import useLocalStorage from './use-local-storage'
 // import useMedia from './useMedia'
 
 // Compose our useMedia hook to detect dark mode preference.

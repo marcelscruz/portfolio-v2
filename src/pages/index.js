@@ -5,7 +5,7 @@ import {
     faLinkedin,
     faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
-import Layout from 'layout'
+import Layout from 'layout/layout'
 import {
     Container,
     LeftPanel,
