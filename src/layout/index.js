@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import { Header } from 'components'
+import { Header, FadeIn } from 'components'
 import { GlobalStyle } from 'styles'
 import { Container, Content } from './layout.styles'
 import { useDarkMode } from 'hooks'
@@ -18,7 +18,9 @@ export const Layout = ({ children, hasFooter }) => {
                     isDarkModeOn={isDarkModeOn}
                     setIsDarkModeOn={setIsDarkModeOn}
                 />
-                <Content>{children}</Content>
+                <Content>
+                    <FadeIn>{children}</FadeIn>
+                </Content>
                 {hasFooter && <h2>Footer</h2>}
             </Container>
         </>
