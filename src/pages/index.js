@@ -15,7 +15,7 @@ import {
     RightPanel,
     Image,
     SocialMediaIcon,
-} from 'components/home/home.styles'
+} from 'components'
 import me from 'images/me.jpg'
 
 const Home = () => {

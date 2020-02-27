@@ -36,6 +36,8 @@ const variables = `
         --primary-hex: var(--dark-primary-hex);
         --secondary: var(--light-primary);
         --secondary-hex: var(--light-primary-hex);
+        --highlight: var(--yellow);
+        --border: rgba(var(--light-primary-hex), 0.1);
     }
 
     :root.light-mode {
@@ -44,6 +46,8 @@ const variables = `
         --primary-hex: var(--light-primary-hex);
         --secondary: var(--dark-primary);
         --secondary-hex: var(--dark-primary-hex);
+        --highlight: var(--dark-tertiary);
+        --border: rgba(var(--dark-primary-hex), 0.1);
     }
 `
 
