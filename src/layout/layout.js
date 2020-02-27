@@ -12,7 +12,7 @@ export const Layout = ({ children, hasFooter }) => {
     return (
         <>
             <GlobalStyle />
-            <Helmet title="marcel cruz" />
+            <Helmet title="marcel cruz • web developer" />
             <Container>
                 <Header
                     isDarkModeOn={isDarkModeOn}
