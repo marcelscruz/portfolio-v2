@@ -35,6 +35,10 @@ export const Title = styled(Link)`
     font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
+
+    &:visited {
+        color: var(--light-primary);
+    }
 `
 
 const blinkingCursor = keyframes`
@@ -57,4 +61,10 @@ export const Cursor = styled.span`
     margin-left: 5px;
     border-radius: 1px;
     animation: ${blinkingCursor} 1s infinite;
+`
+
+export const MenuLink = styled(Link)`
+    &:visited {
+        color: var(--light-primary);
+    }
 `

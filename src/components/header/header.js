@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
 import ThemeToggle from '../theme-toggle/theme-toggle'
 import {
     Container,
@@ -9,6 +8,7 @@ import {
     RightContainer,
     Title,
     Cursor,
+    MenuLink,
 } from './header.styles'
 
 export const Header = props => {
@@ -20,7 +20,7 @@ export const Header = props => {
                     <Cursor />
                 </LeftContainer>
                 <RightContainer>
-                    <Link to="/blog">Blog</Link>
+                    <MenuLink to="/blog">Blog</MenuLink>
                     <ThemeToggle {...props} />
                 </RightContainer>
             </InnerContainer>

@@ -1,13 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
-import fonts from './fonts'
-import prism from './prism'
-import variables from './variables'
-
-export const GlobalStyle = createGlobalStyle`        
-    ${fonts}
-    ${prism}
-    ${variables}
-
+export const reset = `
     html {
         /* font-family: 'Montserrat', sans-serif; */
         -ms-text-size-adjust: 100%;
@@ -650,4 +641,4 @@ export const GlobalStyle = createGlobalStyle`
     }
 `
 
-export default GlobalStyle
+export default reset
