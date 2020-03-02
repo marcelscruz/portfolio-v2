@@ -6,13 +6,13 @@ import {
     BlogEntryContent,
     BlogEntryTitle,
     BlogEntryMetadata,
-    BlogEntryTimestampContainer,
+    // BlogEntryTimestampContainer,
     BlogEntryTimestamp,
-    BlogEntryReadTimeIcon,
-    BlogEntryReadTimeText,
+    // BlogEntryReadTimeIcon,
+    // BlogEntryReadTimeText,
     BlogEntryDescription,
 } from 'components'
-import clock from 'assets/images/clock.png'
+// import clock from 'assets/images/clock.png'
 
 const Home = () => {
     const data = useStaticQuery(graphql`
@@ -25,7 +25,7 @@ const Home = () => {
                         title
                         description
                         slug
-                        publishedDate(formatString: "DD MMMM YYYY")
+                        publishedDate(formatString: "D MMMM YYYY")
                     }
                 }
             }
@@ -55,13 +55,13 @@ const Home = () => {
                                         {publishedDate}
                                     </BlogEntryTimestamp>
 
-                                    <BlogEntryTimestampContainer>
+                                    {/* <BlogEntryTimestampContainer>
                                         <BlogEntryReadTimeIcon src={clock} />
 
                                         <BlogEntryReadTimeText>
                                             5 min
                                         </BlogEntryReadTimeText>
-                                    </BlogEntryTimestampContainer>
+                                    </BlogEntryTimestampContainer> */}
                                 </BlogEntryMetadata>
 
                                 <BlogEntryDescription>
