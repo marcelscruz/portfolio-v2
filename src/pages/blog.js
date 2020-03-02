@@ -8,8 +8,8 @@ import {
     BlogEntryContent,
     BlogEntryTitle,
     BlogEntryMetadata,
+    BlogEntryTimestampContainer,
     BlogEntryTimestamp,
-    BlogEntryMetadataSeparator,
     BlogEntryReadTimeIcon,
     BlogEntryReadTimeText,
     BlogEntryDescription,
@@ -36,8 +36,8 @@ const Home = () => {
     const posts = data.allContentfulBlogPost.edges
 
     const svgSize = {
-        height: '14px',
-        width: '14px',
+        height: '10px',
+        width: '10px',
     }
 
     return (
@@ -55,25 +55,24 @@ const Home = () => {
                         <BlogEntryContent key={index + title}>
                             <Link to={`/blog/${slug}`}>
                                 <BlogEntryTitle>{title}</BlogEntryTitle>
+
                                 <BlogEntryMetadata>
                                     <BlogEntryTimestamp>
                                         {publishedDate}
                                     </BlogEntryTimestamp>
 
-                                    <BlogEntryMetadataSeparator>
-                                        •
-                                    </BlogEntryMetadataSeparator>
+                                    <BlogEntryTimestampContainer>
+                                        <BlogEntryReadTimeIcon>
+                                            <FontAwesomeIcon
+                                                style={svgSize}
+                                                icon={faClock}
+                                            />
+                                        </BlogEntryReadTimeIcon>
 
-                                    <BlogEntryReadTimeIcon>
-                                        <FontAwesomeIcon
-                                            style={svgSize}
-                                            icon={faClock}
-                                        />
-                                    </BlogEntryReadTimeIcon>
-
-                                    <BlogEntryReadTimeText>
-                                        5 min
-                                    </BlogEntryReadTimeText>
+                                        <BlogEntryReadTimeText>
+                                            5 min
+                                        </BlogEntryReadTimeText>
+                                    </BlogEntryTimestampContainer>
                                 </BlogEntryMetadata>
 
                                 <BlogEntryDescription>
