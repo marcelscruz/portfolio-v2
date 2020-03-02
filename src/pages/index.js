@@ -5,6 +5,7 @@ import {
     faLinkedin,
     faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import Layout from 'layout/layout'
 import {
     Container,
@@ -60,6 +61,13 @@ const Home = () => {
 
                         <SocialMediaIcon href="https://twitter.com/marcelcruz">
                             <FontAwesomeIcon style={svgSize} icon={faTwitter} />
+                        </SocialMediaIcon>
+
+                        <SocialMediaIcon href="mailto:marcelcruz@live.com">
+                            <FontAwesomeIcon
+                                style={svgSize}
+                                icon={faEnvelope}
+                            />
                         </SocialMediaIcon>
                     </div>
                 </LeftPanel>
