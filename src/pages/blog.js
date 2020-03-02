@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClock } from '@fortawesome/free-solid-svg-icons'
 import Layout from 'layout/layout'
 import {
     ContentWrapper,
@@ -14,6 +12,7 @@ import {
     BlogEntryReadTimeText,
     BlogEntryDescription,
 } from 'components'
+import clock from 'assets/images/clock.png'
 
 const Home = () => {
     const data = useStaticQuery(graphql`
@@ -26,7 +25,7 @@ const Home = () => {
                         title
                         description
                         slug
-                        publishedDate(formatString: "DD/MM/YYYY")
+                        publishedDate(formatString: "DD MMMM YYYY")
                     }
                 }
             }
@@ -34,11 +33,6 @@ const Home = () => {
     `)
 
     const posts = data.allContentfulBlogPost.edges
-
-    const svgSize = {
-        height: '10px',
-        width: '10px',
-    }
 
     return (
         <Layout>
@@ -62,12 +56,7 @@ const Home = () => {
                                     </BlogEntryTimestamp>
 
                                     <BlogEntryTimestampContainer>
-                                        <BlogEntryReadTimeIcon>
-                                            <FontAwesomeIcon
-                                                style={svgSize}
-                                                icon={faClock}
-                                            />
-                                        </BlogEntryReadTimeIcon>
+                                        <BlogEntryReadTimeIcon src={clock} />
 
                                         <BlogEntryReadTimeText>
                                             5 min

@@ -22,12 +22,12 @@ export const BlogEntryTitle = styled.h2`
 
     &::before {
         color: var(--yellow);
-        content: '•';
-        font-size: 20px;
+        content: '-';
+        font-size: 24px;
         font-weight: 800;
         left: -20px;
         position: absolute;
-        top: 10px;
+        top: 3px;
     }
 `
 
@@ -35,23 +35,22 @@ export const BlogEntryMetadata = styled.div`
     align-items: center;
     color: var(--primary-high-opacity);
     font-size: 12px;
-    margin: 15px 0;
+    margin: 10px 0;
 `
 
 export const BlogEntryTimestampContainer = styled.div`
+    align-items: center;
     display: flex;
 `
 
 export const BlogEntryTimestamp = styled.span``
 
-export const BlogEntryReadTimeIcon = styled.span`
+export const BlogEntryReadTimeIcon = styled.img`
     align-items: center;
     display: flex;
+    height: 10px;
     margin-right: 5px;
-
-    svg {
-        position: relative;
-    }
+    width: 10px;
 `
 
 export const BlogEntryReadTimeText = styled.span``
