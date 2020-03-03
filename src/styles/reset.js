@@ -7,8 +7,8 @@ export const reset = `
     body {
         background: var(--primary);
         margin: 0;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        // -webkit-font-smoothing: antialiased;
+        // -moz-osx-font-smoothing: grayscale;
         font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'Roboto',
             'Segoe UI', Helvetica, Arial, sans-serif;
         font-size: 1rem;
