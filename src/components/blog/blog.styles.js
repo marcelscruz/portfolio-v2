@@ -8,12 +8,6 @@ export const BlogEntryContent = styled.div`
     }
 `
 
-export const BlogEntryTitleContainer = styled.div`
-    align-items: center;
-    display: flex;
-    height: auto;
-`
-
 export const BlogEntryTitle = styled.h2`
     font-size: 32px;
     line-height: 1.3;
