@@ -6,8 +6,8 @@ import {
     BlogEntryContent,
     BlogEntryTitle,
     BlogEntryMetadata,
-    // BlogEntryTimestampContainer,
     BlogEntryTimestamp,
+    // BlogEntryReadTimeContainer,
     // BlogEntryReadTimeIcon,
     // BlogEntryReadTimeText,
     BlogEntryDescription,
@@ -55,13 +55,13 @@ const Home = () => {
                                         {publishedDate}
                                     </BlogEntryTimestamp>
 
-                                    {/* <BlogEntryTimestampContainer>
+                                    {/* <BlogEntryReadTimeContainer>
                                         <BlogEntryReadTimeIcon src={clock} />
 
                                         <BlogEntryReadTimeText>
                                             5 min
                                         </BlogEntryReadTimeText>
-                                    </BlogEntryTimestampContainer> */}
+                                    </BlogEntryReadTimeContainer> */}
                                 </BlogEntryMetadata>
 
                                 <BlogEntryDescription>

@@ -32,13 +32,12 @@ export const BlogEntryMetadata = styled.div`
     margin: 10px 0;
 `
 
-export const BlogEntryTimestampContainer = styled.div`
+export const BlogEntryTimestamp = styled.span``
+
+export const BlogEntryReadTimeContainer = styled.div`
     align-items: center;
     display: flex;
 `
-
-export const BlogEntryTimestamp = styled.span``
-
 export const BlogEntryReadTimeIcon = styled.img`
     align-items: center;
     display: flex;
