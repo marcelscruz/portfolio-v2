@@ -9,7 +9,7 @@ export const IconWrapper = styled.button`
     display: flex;
     height: 36px;
     justify-content: center;
-    margin-left: 30px;
+    margin-left: 50px;
     overflow: hidden;
     position: relative;
     transition: opacity 0.3s ease;

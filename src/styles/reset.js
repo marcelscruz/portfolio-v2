@@ -609,7 +609,7 @@ export const reset = `
     }
     tt,
     code {
-        background-color: hsla(0, 0%, 0%, 0.04);
+        // background-color: hsla(0, 0%, 0%, 0.04);
         border-radius: 3px;
         font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
             'Liberation Mono', Menlo, Courier, monospace;
@@ -627,6 +627,8 @@ export const reset = `
     tt:after {
         letter-spacing: -0.2em;
         content: ' ';
+        display: inline-block;
+        margin: 0 3px;
     }
     pre code:before,
     pre code:after,

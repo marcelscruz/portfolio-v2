@@ -36,7 +36,7 @@ const variables = `
         --primary-hex: var(--dark-primary-hex);
         --secondary: var(--light-primary);
         --secondary-hex: var(--light-primary-hex);
-        --highlight: var(--yellow);
+        --highlight: var(--dark-secondary);
         --primary-high-opacity: rgba(var(--light-primary-hex), 0.7);
         --primary-low-opacity: rgba(var(--light-primary-hex), 0.1);
     }
@@ -47,7 +47,7 @@ const variables = `
         --primary-hex: var(--light-primary-hex);
         --secondary: var(--dark-primary);
         --secondary-hex: var(--dark-primary-hex);
-        --highlight: var(--dark-tertiary);
+        --highlight: var(--light-secondary);
         --primary-high-opacity: rgba(var(--dark-primary-hex), 0.7);
         --primary-low-opacity: rgba(var(--dark-primary-hex), 0.1);
     }

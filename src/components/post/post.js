@@ -3,14 +3,24 @@ import { graphql } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Helmet } from 'react-helmet'
 import Layout from 'layout/layout'
-import { Container, Title, PublishedDate, Body, Separator } from './post.styles'
+import { ContentWrapper } from 'components'
+import {
+    PostTitle,
+    PostMetadata,
+    PostTimestamp,
+    PostReadTimeContainer,
+    PostReadTimeIcon,
+    PostReadTimeText,
+    PostBody,
+} from 'components/post/post.styles'
+import clock from 'assets/images/clock.png'
 
 export const query = graphql`
     query($slug: String!) {
         contentfulBlogPost(slug: { eq: $slug }) {
             title
             description
-            publishedDate(formatString: "DD/MM/YYYY")
+            publishedDate(formatString: "D MMMM YYYY")
             body {
                 json
             }
@@ -18,7 +28,7 @@ export const query = graphql`
     }
 `
 
-export const Post = props => {
+export const Post = ({ data }) => {
     const options = {
         renderNode: {
             'embedded-asset-block': node => {
@@ -39,24 +49,31 @@ export const Post = props => {
         },
     }
 
+    const {
+        contentfulBlogPost: { title, publishedDate, body },
+    } = data
+
     return (
         <Layout hasFooter>
-            <Helmet title={props.data.contentfulBlogPost.title} />
+            <Helmet title={title} />
 
-            <Separator />
-            <Container>
-                <Title>{props.data.contentfulBlogPost.title}</Title>
-                <PublishedDate>
-                    {props.data.contentfulBlogPost.publishedDate}
-                </PublishedDate>
-                <Body>
-                    {documentToReactComponents(
-                        props.data.contentfulBlogPost.body.json,
-                        options,
-                    )}
-                </Body>
-            </Container>
-            <Separator />
+            <ContentWrapper>
+                <PostTitle>{title}</PostTitle>
+
+                <PostMetadata>
+                    <PostTimestamp>{publishedDate}</PostTimestamp>
+
+                    <PostReadTimeContainer>
+                        <PostReadTimeIcon src={clock} />
+
+                        <PostReadTimeText>5 min</PostReadTimeText>
+                    </PostReadTimeContainer>
+                </PostMetadata>
+
+                <PostBody>
+                    {documentToReactComponents(body.json, options)}
+                </PostBody>
+            </ContentWrapper>
         </Layout>
     )
 }

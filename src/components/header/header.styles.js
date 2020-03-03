@@ -64,6 +64,8 @@ export const Cursor = styled.span`
 `
 
 export const MenuLink = styled(Link)`
+    font-weight: 600;
+
     &:visited {
         color: var(--light-primary);
     }
