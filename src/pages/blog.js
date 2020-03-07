@@ -7,12 +7,12 @@ import {
     BlogEntryTitle,
     BlogEntryMetadata,
     BlogEntryTimestamp,
-    // BlogEntryReadTimeContainer,
-    // BlogEntryReadTimeIcon,
-    // BlogEntryReadTimeText,
+    BlogEntryReadTimeContainer,
+    BlogEntryReadTimeIcon,
+    BlogEntryReadTimeText,
     BlogEntryDescription,
 } from 'components'
-// import clock from 'assets/images/clock.png'
+import clock from 'assets/images/clock.png'
 
 const Blog = () => {
     const data = useStaticQuery(graphql`
@@ -26,9 +26,11 @@ const Blog = () => {
                             date
                         }
                         html
-                        excerpt
                         fields {
                             slug
+                            readingTime {
+                                text
+                            }
                         }
                     }
                 }
@@ -43,7 +45,7 @@ const Blog = () => {
             <ContentWrapper>
                 {posts.map((post, index) => {
                     const { title, description, date } = post.node.frontmatter
-                    const slug = post.node.fields.slug
+                    const { slug, readingTime } = post.node.fields
 
                     return (
                         <BlogEntryContent key={index + title}>
@@ -55,13 +57,13 @@ const Blog = () => {
                                         {date}
                                     </BlogEntryTimestamp>
 
-                                    {/* <BlogEntryReadTimeContainer>
+                                    <BlogEntryReadTimeContainer>
                                         <BlogEntryReadTimeIcon src={clock} />
 
                                         <BlogEntryReadTimeText>
-                                            5 min
+                                            {readingTime.text}
                                         </BlogEntryReadTimeText>
-                                    </BlogEntryReadTimeContainer> */}
+                                    </BlogEntryReadTimeContainer>
                                 </BlogEntryMetadata>
 
                                 <BlogEntryDescription>

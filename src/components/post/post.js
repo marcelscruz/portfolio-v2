@@ -22,13 +22,19 @@ export const query = graphql`
                 date
             }
             html
+            fields {
+                readingTime {
+                    text
+                }
+            }
         }
     }
 `
 
 export const Post = props => {
-    const { frontmatter, html } = props.data.markdownRemark
+    const { frontmatter, fields, html } = props.data.markdownRemark
     const { title, date } = frontmatter
+    const { readingTime } = fields
 
     return (
         <Layout hasFooter>
@@ -43,7 +49,7 @@ export const Post = props => {
                     <PostReadTimeContainer>
                         <PostReadTimeIcon src={clock} />
 
-                        <PostReadTimeText>5 min</PostReadTimeText>
+                        <PostReadTimeText>{readingTime.text}</PostReadTimeText>
                     </PostReadTimeContainer>
                 </PostMetadata>
 
