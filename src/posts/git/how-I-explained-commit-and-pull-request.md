@@ -1,7 +1,7 @@
 ---
 title: 'How I Explained Commit and Pull Request'
 description: "I had to explain the basics of Git to someone that had used it only a couple of times, and here's how I did it"
-date: '13-01-2020'
+date: '13 January 2020'
 author: 'Marcel Cruz'
 ---
 
