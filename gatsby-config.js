@@ -7,6 +7,9 @@ module.exports = {
     },
     plugins: [
         'gatsby-plugin-styled-components',
+        'gatsby-plugin-react-helmet',
+        'gatsby-plugin-sass',
+        'gatsby-plugin-sharp',
         {
             resolve: 'gatsby-plugin-root-import',
             options: {
@@ -34,16 +37,6 @@ module.exports = {
                 icon: 'src/assets/images/keyboard.png',
             },
         },
-        'gatsby-plugin-react-helmet',
-        {
-            resolve: 'gatsby-source-contentful',
-            options: {
-                spaceId: process.env.CONTENTFUL_SPACE_ID,
-                accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN,
-            },
-        },
-        'gatsby-plugin-sass',
-        'gatsby-plugin-sharp',
         {
             resolve: 'gatsby-transformer-remark',
             options: {

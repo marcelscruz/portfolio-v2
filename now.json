@@ -1,9 +1,7 @@
 {
 	"build": {
 		"env": {
-			"GATSBY_GRAPHQL_IDE": "@portfolio_v2_gatsby_graphql_ide",
-			"CONTENTFUL_SPACE_ID": "@portfolio_v2_contentful_space_id",
-			"CONTENTFUL_DELIVERY_TOKEN": "@portfolio_v2_contentful_delivery_token"
+			"GATSBY_GRAPHQL_IDE": "@portfolio_v2_gatsby_graphql_ide"
 		}
 	}
 }
