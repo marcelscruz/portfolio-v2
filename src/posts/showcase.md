@@ -1,8 +1,9 @@
 ---
-title: "Showcase"
-date: "2018-07-17"
-author: "Hello Robot"
-path: "/showcase"
+title: 'Showcase'
+description: 'Desc1'
+date: '2018-07-17'
+author: 'Hello Robot'
+path: '/showcase'
 ---
 
 ## Header 2
@@ -19,27 +20,27 @@ Brute-force intercepting traffic fiber connection system boot up fsociety reboot
 /* PostCSS code by PrismJS */
 
 pre {
-  background: #1a1a1d;
-  padding: 20px;
-  border-radius: 8px;
-  font-size: 1rem;
-  overflow: auto;
+    background: #1a1a1d;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    overflow: auto;
 
-  @media (--phone) {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-
-  code {
-    background: none !important;
-    color: #ccc;
-    padding: 0;
-    font-size: inherit;
-
-    .dark-theme & {
-      color: inherit;
+    @media (--phone) {
+        white-space: pre-wrap;
+        word-wrap: break-word;
     }
-  }
+
+    code {
+        background: none !important;
+        color: #ccc;
+        padding: 0;
+        font-size: inherit;
+
+        .dark-theme & {
+            color: inherit;
+        }
+    }
 }
 ```
 
@@ -48,11 +49,13 @@ pre {
 
 const menuTrigger = document.querySelector('.menu-trigger')
 const menu = document.querySelector('.menu')
-const mobileQuery = getComputedStyle(document.body).getPropertyValue('--phoneWidth')
+const mobileQuery = getComputedStyle(document.body).getPropertyValue(
+    '--phoneWidth',
+)
 const isMobile = () => window.matchMedia(mobileQuery).matches
 const isMobileMenu = () => {
-  menuTrigger.classList.toggle('hidden', !isMobile())
-  menu.classList.toggle('hidden', isMobile())
+    menuTrigger.classList.toggle('hidden', !isMobile())
+    menu.classList.toggle('hidden', isMobile())
 }
 
 isMobileMenu()
@@ -64,12 +67,10 @@ window.addEventListener('resize', isMobileMenu)
 
 ```html
 <section id="main">
-  <div>
-   <h1 id="title">{{ .Title }}</h1>
-    {{ range .Pages }}
-        {{ .Render "summary"}}
-    {{ end }}
-  </div>
+    <div>
+        <h1 id="title">{{ .Title }}</h1>
+        {{ range .Pages }} {{ .Render "summary"}} {{ end }}
+    </div>
 </section>
 ```
 
@@ -77,12 +78,12 @@ window.addEventListener('resize', isMobileMenu)
 
 Traffic RUDY attack nodes anonymous IP network code two-step verification system files data center bonsoir terminal. Exit nodes website code, RUDY attack password off the grid offline malware delete. Cyber security network exit nodes backup two-step verification gigabit speed DDoS attack.
 
-- Fsociety delete malicious code nodes.
-- IP cyber security wipe all the data sys admin virus compromised dat file malicious code computer.
-- Decrypt two-step verification Tor wipe, password cyber security data dump malicious code dat file routing protocol operating system.
-- Anonymous boot up website AFK.
-  - Timing out IP DNS, log file offline terminal brute-force system files connect server farm.
-  - Reboot sys admin worm log file wipe.
+-   Fsociety delete malicious code nodes.
+-   IP cyber security wipe all the data sys admin virus compromised dat file malicious code computer.
+-   Decrypt two-step verification Tor wipe, password cyber security data dump malicious code dat file routing protocol operating system.
+-   Anonymous boot up website AFK.
+    -   Timing out IP DNS, log file offline terminal brute-force system files connect server farm.
+    -   Reboot sys admin worm log file wipe.
 
 `youtube: xIBiJ_SzJTA`
 

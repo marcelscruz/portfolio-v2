@@ -22,6 +22,7 @@ const Blog = () => {
                     node {
                         frontmatter {
                             title
+                            description
                             date
                         }
                         html
@@ -41,7 +42,7 @@ const Blog = () => {
         <Layout>
             <ContentWrapper>
                 {posts.map((post, index) => {
-                    const { title, date } = post.node.frontmatter
+                    const { title, description, date } = post.node.frontmatter
                     const slug = post.node.fields.slug
 
                     return (
@@ -51,7 +52,6 @@ const Blog = () => {
 
                                 <BlogEntryMetadata>
                                     <BlogEntryTimestamp>
-                                        {/* {publishedDate} */}
                                         {date}
                                     </BlogEntryTimestamp>
 
@@ -65,7 +65,7 @@ const Blog = () => {
                                 </BlogEntryMetadata>
 
                                 <BlogEntryDescription>
-                                    {/* {description} */}
+                                    {description}
                                 </BlogEntryDescription>
                             </Link>
                         </BlogEntryContent>
