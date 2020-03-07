@@ -56,6 +56,23 @@ module.exports = {
                             linkImagesToOriginal: false,
                         },
                     },
+                    {
+                        resolve: 'gatsby-remark-embed-video',
+                        options: {
+                            related: false,
+                            noIframeBorder: true,
+                        },
+                    },
+                    {
+                        resolve: `gatsby-remark-prismjs`,
+                        options: {
+                            classPrefix: 'language-',
+                            inlineCodeMarker: null,
+                            aliases: {},
+                            showLineNumbers: false,
+                            noInlineHighlight: false,
+                        },
+                    },
                 ],
             },
         },

@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Helmet } from 'react-helmet'
 import Layout from 'layout/layout'
 import { ContentWrapper } from 'components'
@@ -17,41 +16,19 @@ import clock from 'assets/images/clock.png'
 
 export const query = graphql`
     query($slug: String!) {
-        contentfulBlogPost(slug: { eq: $slug }) {
-            title
-            description
-            publishedDate(formatString: "D MMMM YYYY")
-            body {
-                json
+        markdownRemark(fields: { slug: { eq: $slug } }) {
+            frontmatter {
+                title
+                date
             }
+            html
         }
     }
 `
 
-export const Post = ({ data }) => {
-    const options = {
-        renderNode: {
-            'embedded-asset-block': node => {
-                const alt = node.data.target.fields.title['en-US']
-                const url = node.data.target.fields.file['en-US'].url
-
-                return <img alt={alt} src={url} />
-            },
-        },
-        renderText: text => {
-            return text.split('\n').reduce((children, textSegment, index) => {
-                return [
-                    ...children,
-                    index > 0 && <br key={index} />,
-                    textSegment,
-                ]
-            }, [])
-        },
-    }
-
-    const {
-        contentfulBlogPost: { title, publishedDate, body },
-    } = data
+export const Post = props => {
+    const { frontmatter, html } = props.data.markdownRemark
+    const { title, date } = frontmatter
 
     return (
         <Layout hasFooter>
@@ -61,7 +38,7 @@ export const Post = ({ data }) => {
                 <PostTitle>{title}</PostTitle>
 
                 <PostMetadata>
-                    <PostTimestamp>{publishedDate}</PostTimestamp>
+                    <PostTimestamp>{date}</PostTimestamp>
 
                     <PostReadTimeContainer>
                         <PostReadTimeIcon src={clock} />
@@ -70,9 +47,7 @@ export const Post = ({ data }) => {
                     </PostReadTimeContainer>
                 </PostMetadata>
 
-                <PostBody>
-                    {documentToReactComponents(body.json, options)}
-                </PostBody>
+                <PostBody dangerouslySetInnerHTML={{ __html: html }} />
             </ContentWrapper>
         </Layout>
     )

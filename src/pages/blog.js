@@ -14,36 +14,35 @@ import {
 } from 'components'
 // import clock from 'assets/images/clock.png'
 
-const Home = () => {
+const Blog = () => {
     const data = useStaticQuery(graphql`
         query {
-            allContentfulBlogPost(
-                sort: { fields: publishedDate, order: DESC }
-            ) {
+            allMarkdownRemark {
                 edges {
                     node {
-                        title
-                        description
-                        slug
-                        publishedDate(formatString: "D MMMM YYYY")
+                        frontmatter {
+                            title
+                            date
+                        }
+                        html
+                        excerpt
+                        fields {
+                            slug
+                        }
                     }
                 }
             }
         }
     `)
 
-    const posts = data.allContentfulBlogPost.edges
+    const posts = data.allMarkdownRemark.edges
 
     return (
         <Layout>
             <ContentWrapper>
                 {posts.map((post, index) => {
-                    const {
-                        title,
-                        description,
-                        slug,
-                        publishedDate,
-                    } = post.node
+                    const { title, date } = post.node.frontmatter
+                    const slug = post.node.fields.slug
 
                     return (
                         <BlogEntryContent key={index + title}>
@@ -52,7 +51,8 @@ const Home = () => {
 
                                 <BlogEntryMetadata>
                                     <BlogEntryTimestamp>
-                                        {publishedDate}
+                                        {/* {publishedDate} */}
+                                        {date}
                                     </BlogEntryTimestamp>
 
                                     {/* <BlogEntryReadTimeContainer>
@@ -65,7 +65,7 @@ const Home = () => {
                                 </BlogEntryMetadata>
 
                                 <BlogEntryDescription>
-                                    {description}
+                                    {/* {description} */}
                                 </BlogEntryDescription>
                             </Link>
                         </BlogEntryContent>
@@ -76,4 +76,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Blog
