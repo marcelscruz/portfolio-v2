@@ -66,7 +66,7 @@ export const MoonOrSun = styled.div`
     height: 24px;
     overflow: ${p => (p.isDarkModeOn ? 'visible' : 'hidden')};
     position: relative;
-    transform: scale(${p => (p.isDarkModeOn ? 0.55 : 1)});
+    transform: scale(${p => (p.isDarkModeOn ? 0.45 : 0.85)});
     transition: all 0.3s ease;
     width: 24px;
 
