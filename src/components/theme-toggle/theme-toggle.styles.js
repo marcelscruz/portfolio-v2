@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import { sizes } from 'constants/sizes'
+
+const { phoneWidth } = sizes
 
 export const IconWrapper = styled.button`
     align-items: center;
@@ -49,6 +52,10 @@ export const IconWrapper = styled.button`
         position: absolute;
         top: -30%;
         width: 100%;
+    }
+
+    @media screen and (max-width: ${phoneWidth}) {
+        margin-left: 30px;
     }
 `
 
