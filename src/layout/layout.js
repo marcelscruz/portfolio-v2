@@ -6,7 +6,7 @@ import { GlobalStyle } from 'styles'
 import { Container, Content } from './layout.styles'
 import { useDarkMode } from 'hooks'
 
-export const Layout = ({ children, hasFooter }) => {
+export const Layout = ({ children }) => {
     const [isDarkModeOn, setIsDarkModeOn] = useDarkMode()
 
     return (
@@ -21,7 +21,6 @@ export const Layout = ({ children, hasFooter }) => {
                 <Content>
                     <FadeIn>{children}</FadeIn>
                 </Content>
-                {hasFooter && <h2>Footer</h2>}
             </Container>
         </>
     )

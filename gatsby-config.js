@@ -77,5 +77,11 @@ module.exports = {
                 path: `${__dirname}/src/`,
             },
         },
+        {
+            resolve: `gatsby-plugin-layout`,
+            options: {
+                component: require.resolve(`./src/layout/layout.js`),
+            },
+        },
     ],
 }

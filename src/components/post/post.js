@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import Layout from 'layout/layout'
 import { ContentWrapper } from 'components'
 import {
     PostTitle,
@@ -37,7 +36,7 @@ export const Post = props => {
     const { readingTime } = fields
 
     return (
-        <Layout hasFooter>
+        <>
             <Helmet title={title} />
 
             <ContentWrapper>
@@ -55,7 +54,7 @@ export const Post = props => {
 
                 <PostBody dangerouslySetInnerHTML={{ __html: html }} />
             </ContentWrapper>
-        </Layout>
+        </>
     )
 }
 

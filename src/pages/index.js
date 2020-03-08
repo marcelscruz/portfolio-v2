@@ -6,7 +6,6 @@ import {
     faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import Layout from 'layout/layout'
 import {
     Container,
     LeftPanel,
@@ -26,57 +25,49 @@ const Home = () => {
     }
 
     return (
-        <Layout>
-            <Container>
-                <LeftPanel>
-                    <div>
-                        <Title>
-                            <TitleHighlight noMarginLeft>&lt;</TitleHighlight>
-                            web
-                            <br />
-                            developer
-                            <TitleHighlight noMarginRight>&gt;</TitleHighlight>
-                        </Title>
-
+        <Container>
+            <LeftPanel>
+                <div>
+                    <Title>
+                        <TitleHighlight noMarginLeft>&lt;</TitleHighlight>
+                        web
                         <br />
+                        developer
+                        <TitleHighlight noMarginRight>&gt;</TitleHighlight>
+                    </Title>
 
-                        <Subtitle>
-                            I<span>'</span>m a full stack developer
-                            <span>,</span> writing clean and efficient code
-                            <span>.</span>
-                        </Subtitle>
-                    </div>
+                    <br />
 
-                    <div>
-                        <SocialMediaIcon href="https://www.linkedin.com/in/marcelscruz/">
-                            <FontAwesomeIcon
-                                style={svgSize}
-                                icon={faLinkedin}
-                            />
-                        </SocialMediaIcon>
+                    <Subtitle>
+                        I<span>'</span>m a full stack developer
+                        <span>,</span> writing clean and efficient code
+                        <span>.</span>
+                    </Subtitle>
+                </div>
 
-                        <SocialMediaIcon href="https://github.com/marcelscruz">
-                            <FontAwesomeIcon style={svgSize} icon={faGithub} />
-                        </SocialMediaIcon>
+                <div>
+                    <SocialMediaIcon href="https://www.linkedin.com/in/marcelscruz/">
+                        <FontAwesomeIcon style={svgSize} icon={faLinkedin} />
+                    </SocialMediaIcon>
 
-                        <SocialMediaIcon href="https://twitter.com/marcelcruz">
-                            <FontAwesomeIcon style={svgSize} icon={faTwitter} />
-                        </SocialMediaIcon>
+                    <SocialMediaIcon href="https://github.com/marcelscruz">
+                        <FontAwesomeIcon style={svgSize} icon={faGithub} />
+                    </SocialMediaIcon>
 
-                        <SocialMediaIcon href="mailto:marcelcruz@live.com">
-                            <FontAwesomeIcon
-                                style={svgSize}
-                                icon={faEnvelope}
-                            />
-                        </SocialMediaIcon>
-                    </div>
-                </LeftPanel>
+                    <SocialMediaIcon href="https://twitter.com/marcelcruz">
+                        <FontAwesomeIcon style={svgSize} icon={faTwitter} />
+                    </SocialMediaIcon>
 
-                <RightPanel>
-                    <Image src={me} alt="Marcel Cruz" />
-                </RightPanel>
-            </Container>
-        </Layout>
+                    <SocialMediaIcon href="mailto:marcelcruz@live.com">
+                        <FontAwesomeIcon style={svgSize} icon={faEnvelope} />
+                    </SocialMediaIcon>
+                </div>
+            </LeftPanel>
+
+            <RightPanel>
+                <Image src={me} alt="Marcel Cruz" />
+            </RightPanel>
+        </Container>
     )
 }
 

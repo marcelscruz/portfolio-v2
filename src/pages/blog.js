@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import Layout from 'layout/layout'
 import {
     ContentWrapper,
     BlogEntryContent,
@@ -41,40 +40,36 @@ const Blog = () => {
     const posts = data.allMarkdownRemark.edges
 
     return (
-        <Layout>
-            <ContentWrapper>
-                {posts.map((post, index) => {
-                    const { title, description, date } = post.node.frontmatter
-                    const { slug, readingTime } = post.node.fields
+        <ContentWrapper>
+            {posts.map((post, index) => {
+                const { title, description, date } = post.node.frontmatter
+                const { slug, readingTime } = post.node.fields
 
-                    return (
-                        <BlogEntryContent key={index + title}>
-                            <Link to={`/blog/${slug}`}>
-                                <BlogEntryTitle>{title}</BlogEntryTitle>
+                return (
+                    <BlogEntryContent key={index + title}>
+                        <Link to={`/blog/${slug}`}>
+                            <BlogEntryTitle>{title}</BlogEntryTitle>
 
-                                <BlogEntryMetadata>
-                                    <BlogEntryTimestamp>
-                                        {date}
-                                    </BlogEntryTimestamp>
+                            <BlogEntryMetadata>
+                                <BlogEntryTimestamp>{date}</BlogEntryTimestamp>
 
-                                    <BlogEntryReadTimeContainer>
-                                        <BlogEntryReadTimeIcon src={clock} />
+                                <BlogEntryReadTimeContainer>
+                                    <BlogEntryReadTimeIcon src={clock} />
 
-                                        <BlogEntryReadTimeText>
-                                            {readingTime.text}
-                                        </BlogEntryReadTimeText>
-                                    </BlogEntryReadTimeContainer>
-                                </BlogEntryMetadata>
+                                    <BlogEntryReadTimeText>
+                                        {readingTime.text}
+                                    </BlogEntryReadTimeText>
+                                </BlogEntryReadTimeContainer>
+                            </BlogEntryMetadata>
 
-                                <BlogEntryDescription>
-                                    {description}
-                                </BlogEntryDescription>
-                            </Link>
-                        </BlogEntryContent>
-                    )
-                })}
-            </ContentWrapper>
-        </Layout>
+                            <BlogEntryDescription>
+                                {description}
+                            </BlogEntryDescription>
+                        </Link>
+                    </BlogEntryContent>
+                )
+            })}
+        </ContentWrapper>
     )
 }
 
