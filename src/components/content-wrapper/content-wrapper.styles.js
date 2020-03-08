@@ -7,9 +7,9 @@ export const ContentWrapper = styled.div`
     color: var(--secondary);
     margin: 0 auto;
     max-width: 800px;
-    padding: 50px 0;
+    padding: 40px 0;
 
     @media screen and (max-width: ${phoneWidth}) {
-        padding: 0px;
+        padding: 30px 0;
     }
 `

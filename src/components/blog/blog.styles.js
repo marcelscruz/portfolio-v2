@@ -6,6 +6,14 @@ const { phoneWidth } = sizes
 export const BlogEntryContent = styled.div`
     padding: 40px 0;
 
+    &:first-of-type {
+        padding-top: 0;
+    }
+
+    &:last-of-type {
+        padding-bottom: 0;
+    }
+
     &:not(:last-child) {
         border-bottom: 1px dashed var(--primary-low-opacity);
     }

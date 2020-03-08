@@ -75,8 +75,13 @@ export const Cursor = styled.span`
 export const MenuLink = styled(Link)`
     font-weight: 600;
     transition: var(--colorTransition);
+    color: var(--light-primary);
 
     &:hover {
         color: var(--yellow);
+    }
+
+    &:visited {
+        color: var(--light-primary);
     }
 `

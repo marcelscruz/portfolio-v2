@@ -131,7 +131,7 @@ export const SocialMediaContainer = styled.div`
     height: 20px;
 
     @media screen and (max-width: ${tabletWidth}) {
-        bottom: 10px;
+        bottom: 20px;
         position: absolute;
         z-index: 10;
     }

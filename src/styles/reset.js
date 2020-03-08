@@ -5,7 +5,7 @@ export const reset = `
         -webkit-text-size-adjust: 100%;
     }
     body {
-        background: var(--primary);
+        background: var(--dark-primary);
         margin: 0;
         // -webkit-font-smoothing: antialiased;
         // -moz-osx-font-smoothing: grayscale;

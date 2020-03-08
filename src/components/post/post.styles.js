@@ -7,7 +7,6 @@ export const PostTitle = styled.h1`
     font-size: 42px;
     line-height: 1.3;
     margin: 0;
-    margin-top: 40px;
     position: relative;
 
     @media screen and (max-width: ${phoneWidth}) {
@@ -37,6 +36,10 @@ export const PostMetadata = styled.div`
     color: var(--primary-high-opacity);
     font-size: 12px;
     margin: 20px 0 40px;
+
+    @media screen and (max-width: ${phoneWidth}) {
+        margin-bottom: 30px;
+    }
 `
 
 export const PostTimestamp = styled.span``
@@ -59,4 +62,10 @@ export const PostReadTimeText = styled.span``
 export const PostBody = styled.div`
     line-height: 1.7;
     text-align: justify;
+
+    p {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
 `
