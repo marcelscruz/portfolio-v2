@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import { sizes } from 'constants/sizes'
+
+const { phoneWidth } = sizes
 
 export const PostTitle = styled.h2`
     font-size: 42px;
@@ -7,9 +10,9 @@ export const PostTitle = styled.h2`
     margin-top: 40px;
     position: relative;
 
-    /* @media screen and (max-width: 800px) {
+    @media screen and (max-width: ${phoneWidth}) {
         font-size: 32px;
-    } */
+    }
 
     &::before {
         color: var(--yellow);
@@ -19,6 +22,13 @@ export const PostTitle = styled.h2`
         left: -26px;
         position: absolute;
         top: 3px;
+
+        @media screen and (max-width: ${phoneWidth}) {
+            content: '|';
+            font-size: 24px;
+            left: -23px;
+            top: 5px;
+        }
     }
 `
 
@@ -26,7 +36,7 @@ export const PostMetadata = styled.div`
     align-items: center;
     color: var(--primary-high-opacity);
     font-size: 12px;
-    margin: 20px 0;
+    margin: 20px 0 40px;
 `
 
 export const PostTimestamp = styled.span``

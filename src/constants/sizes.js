@@ -1,5 +1,5 @@
 export const sizes = {
-    phoneWidth: '684px',
+    phoneWidth: '600px',
     tabletWidth: '900px',
     maxOverallWidth: '1600px',
 }

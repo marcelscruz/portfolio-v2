@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { sizes } from 'constants/sizes'
 
-const { maxOverallWidth } = sizes
+const { maxOverallWidth, tabletWidth, phoneWidth } = sizes
 
 export const Container = styled.div`
     background: var(--primary);
@@ -15,4 +15,12 @@ export const Content = styled.div`
     margin: 0 auto;
     max-width: ${maxOverallWidth};
     padding: 0 100px;
+
+    @media screen and (max-width: ${tabletWidth}) {
+        padding: 0 60px;
+    }
+
+    @media screen and (max-width: ${phoneWidth}) {
+        padding: 0 20px;
+    }
 `

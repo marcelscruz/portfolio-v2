@@ -1,10 +1,17 @@
 import styled from 'styled-components'
+import { sizes } from 'constants/sizes'
+
+const { phoneWidth } = sizes
 
 export const BlogEntryContent = styled.div`
     padding: 40px 0;
 
     &:not(:last-child) {
         border-bottom: 1px dashed var(--primary-low-opacity);
+    }
+
+    @media screen and (max-width: ${phoneWidth}) {
+        padding: 30px 0;
     }
 `
 
@@ -22,6 +29,12 @@ export const BlogEntryTitle = styled.h2`
         left: -20px;
         position: absolute;
         top: 3px;
+
+        @media screen and (max-width: ${phoneWidth}) {
+            content: '|';
+            left: -23px;
+            top: 5px;
+        }
     }
 `
 
@@ -53,4 +66,8 @@ export const BlogEntryDescription = styled.h3`
     font-weight: 400;
     line-height: 1.3;
     margin: 0;
+
+    @media screen and (max-width: ${phoneWidth}) {
+        font-size: 16px;
+    }
 `

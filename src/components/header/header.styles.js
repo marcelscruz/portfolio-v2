@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components'
 import { Link } from 'gatsby'
 import { sizes } from 'constants/sizes'
 
-const { maxOverallWidth } = sizes
+const { maxOverallWidth, tabletWidth, phoneWidth } = sizes
 
 export const Container = styled.header`
     background: var(--dark-primary);
@@ -18,6 +18,14 @@ export const InnerContainer = styled.div`
     margin: 0 auto;
     max-width: ${maxOverallWidth};
     padding: 0 100px;
+
+    @media screen and (max-width: ${tabletWidth}) {
+        padding: 0 60px;
+    }
+
+    @media screen and (max-width: ${phoneWidth}) {
+        padding: 0 20px;
+    }
 `
 
 export const LeftContainer = styled.div`
