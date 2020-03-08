@@ -10,42 +10,54 @@ const fonts = `
         font-family: 'Inter UI';
         font-style:  normal;
         font-weight: 400;
-        src: url(${InterUIRegular}) format("woff");
+        font-display: swap;
+        unicode-range: U+000-5FF;
+        src: local('Inter UI'), url(${InterUIRegular}) format("woff");
     }
 
     @font-face {
         font-family: 'Inter UI';
         font-style:  italic;
         font-weight: 400;
-        src: url(${InterUIItalic}) format("woff");
+        font-display: swap;
+        unicode-range: U+000-5FF;
+        src: local('Inter UI'), url(${InterUIItalic}) format("woff");
     }
 
     @font-face {
         font-family: 'Inter UI';
         font-style:  normal;
         font-weight: 600;
-        src: url(${InterUIMedium}) format("woff");
+        font-display: swap;
+        unicode-range: U+000-5FF;
+        src: local('Inter UI'), url(${InterUIMedium}) format("woff");
     }
 
     @font-face {
         font-family: 'Inter UI';
         font-style:  italic;
         font-weight: 600;
-        src: url(${InterUIMediumItalic}) format("woff");
+        font-display: swap;
+        unicode-range: U+000-5FF;
+        src: local('Inter UI'), url(${InterUIMediumItalic}) format("woff");
     }
 
     @font-face {
         font-family: 'Inter UI';
         font-style:  normal;
         font-weight: 800;
-        src: url(${InterUIBold}) format("woff");
+        font-display: swap;
+        unicode-range: U+000-5FF;
+        src: local('Inter UI'), url(${InterUIBold}) format("woff");
     }
     
     @font-face {
         font-family: 'Inter UI';
         font-style:  italic;
         font-weight: 800;
-        src: url(${InterUIBoldItalic}) format("woff");
+        font-display: swap;
+        unicode-range: U+000-5FF;
+        src: local('Inter UI'), url(${InterUIBoldItalic}) format("woff");
     }  
 `
 
