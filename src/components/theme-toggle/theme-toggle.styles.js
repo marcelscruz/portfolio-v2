@@ -38,10 +38,6 @@ export const IconWrapper = styled.button`
         }
     }
 
-    &:focus {
-        outline: none;
-    }
-
     &[data-a11y='true']:focus::after {
         background: rgba(var(--light-primary-hex), 0.01);
         border: 2px solid var(--light-primary);

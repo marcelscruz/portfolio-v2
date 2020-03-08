@@ -1,4 +1,8 @@
 export const generalConfiguration = `
+    * {
+      outline-color: var(--yellow);
+    }
+
     a {
         color: var(--secondary);
         text-decoration: none;
