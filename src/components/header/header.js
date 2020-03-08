@@ -16,8 +16,9 @@ export const Header = props => {
         <Container>
             <InnerContainer>
                 <LeftContainer>
-                    <Title to="/">marcel cruz</Title>
-                    <Cursor />
+                    <Title to="/">
+                        marcel cruz <Cursor />
+                    </Title>
                 </LeftContainer>
                 <RightContainer>
                     <MenuLink to="/blog">Blog</MenuLink>

@@ -62,13 +62,14 @@ const blinkingCursor = keyframes`
 `
 
 export const Cursor = styled.span`
-    display: inline-block;
-    width: 10px;
-    height: 0.9rem;
-    background: var(--yellow);
-    margin-left: 5px;
-    border-radius: 1px;
     animation: ${blinkingCursor} 1s infinite;
+    background: var(--yellow);
+    border-radius: 1px;
+    display: inline-block;
+    height: 0.85rem;
+    position: relative;
+    top: 1px;
+    width: 10px;
 `
 
 export const MenuLink = styled(Link)`
