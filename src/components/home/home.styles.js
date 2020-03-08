@@ -1,4 +1,7 @@
 import styled, { css } from 'styled-components'
+import { sizes } from 'constants/sizes'
+
+const { tabletWidth, phoneWidth } = sizes
 
 export const Container = styled.div`
     display: flex;
@@ -6,6 +9,10 @@ export const Container = styled.div`
     justify-content: space-between;
     position: relative;
     width: 100vw;
+
+    @media screen and (max-width: ${tabletWidth}) {
+        flex-direction: column;
+    }
 `
 
 export const LeftPanel = styled.div`
@@ -16,6 +23,15 @@ export const LeftPanel = styled.div`
     justify-content: space-between;
     padding: 50px 0 50px;
     text-align: left;
+
+    @media screen and (max-width: ${tabletWidth}) {
+        height: 30%;
+        padding: 20px 0;
+    }
+
+    @media screen and (max-width: 320px) {
+        height: 35%;
+    }
 `
 
 export const Title = styled.h1`
@@ -27,6 +43,12 @@ export const Title = styled.h1`
     margin: 50px 0;
     text-shadow: rgba(var(--light-primary-hex), 0.2) 0px 0px 20px;
     transition: var(--colorTransition);
+
+    @media screen and (max-width: ${phoneWidth}) {
+        font-size: 48px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
 `
 
 export const TitleHighlight = styled.span`
@@ -49,6 +71,10 @@ export const TitleHighlight = styled.span`
         css`
             margin-right: 0;
         `}
+
+    @media screen and (max-width: ${tabletWidth}) {
+        font-size: 58px;
+    }
 `
 
 export const Subtitle = styled.h2`
@@ -63,6 +89,10 @@ export const Subtitle = styled.h2`
     span {
         color: var(--yellow);
     }
+
+    @media screen and (max-width: ${phoneWidth}) {
+        font-size: 18px;
+    }
 `
 
 export const RightPanel = styled.div`
@@ -73,6 +103,17 @@ export const RightPanel = styled.div`
     justify-content: center;
     right: 0;
     width: 70%;
+
+    @media screen and (max-width: ${tabletWidth}) {
+        clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0 41%);
+        left: -60px; /* Layout Content left padding */
+        position: relative;
+        width: 100vw;
+    }
+
+    @media screen and (max-width: ${phoneWidth}) {
+        left: -20px; /* Layout Content left padding */
+    }
 `
 
 export const Image = styled.img`
@@ -80,6 +121,20 @@ export const Image = styled.img`
     height: 100%;
     object-fit: cover;
     position: absolute;
+
+    @media screen and (max-width: ${tabletWidth}) {
+        height: 70%;
+    }
+`
+
+export const SocialMediaContainer = styled.div`
+    height: 20px;
+
+    @media screen and (max-width: ${tabletWidth}) {
+        bottom: 10px;
+        position: absolute;
+        z-index: 10;
+    }
 `
 
 export const SocialMediaIcon = styled.a.attrs({
@@ -87,12 +142,6 @@ export const SocialMediaIcon = styled.a.attrs({
     target: '_blank',
 })`
     margin-right: 15px;
-
-    &:visited {
-        svg {
-            color: var(--secondary);
-        }
-    }
 
     svg {
         color: var(--secondary);
@@ -102,6 +151,10 @@ export const SocialMediaIcon = styled.a.attrs({
 
         &:hover {
             color: var(--yellow);
+        }
+
+        @media screen and (max-width: ${tabletWidth}) {
+            color: var(--light-primary);
         }
     }
 `

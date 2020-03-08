@@ -14,6 +14,7 @@ import {
     Subtitle,
     RightPanel,
     Image,
+    SocialMediaContainer,
     SocialMediaIcon,
 } from 'components'
 import me from 'images/me.jpg'
@@ -45,7 +46,7 @@ const Home = () => {
                     </Subtitle>
                 </div>
 
-                <div>
+                <SocialMediaContainer>
                     <SocialMediaIcon href="https://www.linkedin.com/in/marcelscruz/">
                         <FontAwesomeIcon style={svgSize} icon={faLinkedin} />
                     </SocialMediaIcon>
@@ -61,7 +62,7 @@ const Home = () => {
                     <SocialMediaIcon href="mailto:marcelcruz@live.com">
                         <FontAwesomeIcon style={svgSize} icon={faEnvelope} />
                     </SocialMediaIcon>
-                </div>
+                </SocialMediaContainer>
             </LeftPanel>
 
             <RightPanel>
