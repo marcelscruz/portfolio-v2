@@ -6,17 +6,23 @@ const { phoneWidth } = sizes
 export const BlogEntryContent = styled.div`
     padding: 40px 0;
 
-    &:first-of-type {
+    ${({ isFirstOfType }) =>
+        isFirstOfType &&
+        `
         padding-top: 0;
-    }
+    `}
 
-    &:last-of-type {
+    ${({ isLastOfType }) =>
+        isLastOfType &&
+        `
         padding-bottom: 0;
-    }
+    `}
 
-    &:not(:last-child) {
+    ${({ isLastOfType }) =>
+        !isLastOfType &&
+        `
         border-bottom: 1px dashed var(--primary-low-opacity);
-    }
+    `}
 
     @media screen and (max-width: ${phoneWidth}) {
         padding: 30px 0;

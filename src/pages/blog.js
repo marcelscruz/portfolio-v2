@@ -45,9 +45,15 @@ const Blog = () => {
                 const { title, description, date } = post.node.frontmatter
                 const { slug, readingTime } = post.node.fields
 
+                const isFirstOfType = index === 0
+                const isLastOfType = index === posts.length - 1
+
                 return (
-                    <BlogEntryContent key={index + title}>
-                        <Link to={`/blog/${slug}`}>
+                    <Link to={`/blog/${slug}`} key={index + title}>
+                        <BlogEntryContent
+                            isFirstOfType={isFirstOfType}
+                            isLastOfType={isLastOfType}
+                        >
                             <BlogEntryTitle>{title}</BlogEntryTitle>
 
                             <BlogEntryMetadata>
@@ -65,8 +71,8 @@ const Blog = () => {
                             <BlogEntryDescription>
                                 {description}
                             </BlogEntryDescription>
-                        </Link>
-                    </BlogEntryContent>
+                        </BlogEntryContent>
+                    </Link>
                 )
             })}
         </ContentWrapper>
