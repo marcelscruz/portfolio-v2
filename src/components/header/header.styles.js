@@ -83,5 +83,9 @@ export const MenuLink = styled(Link)`
 
     &:visited {
         color: var(--light-primary);
+
+        &:hover {
+            color: var(--yellow);
+        }
     }
 `
