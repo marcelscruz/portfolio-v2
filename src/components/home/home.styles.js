@@ -56,7 +56,7 @@ export const Title = styled.h1`
 
     @media screen and (max-height: ${phoneHeight}) {
         font-size: 38px;
-        margin: 0 0 20px;
+        margin: 20px 0;
     }
 `
 
@@ -174,8 +174,12 @@ export const SocialMediaIcon = styled.a.attrs({
             color: var(--yellow);
         }
 
-        @media screen and (max-width: ${tabletWidth}) {
+        @media screen and (max-width: ${phoneWidth}) {
             color: var(--light-primary);
+        }
+
+        @media screen and (max-height: ${phoneHeight}) {
+            color: var(--secondary);
         }
     }
 `
