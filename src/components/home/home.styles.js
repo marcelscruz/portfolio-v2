@@ -5,7 +5,7 @@ const { tabletWidth, phoneWidth } = sizes
 
 export const Container = styled.div`
     display: flex;
-    height: calc(100vh - 80px); /* Viewport height - header height */
+    height: calc(var(--vh) - 80px); /* Viewport height - header height */
     justify-content: space-between;
     position: relative;
     width: 100vw;

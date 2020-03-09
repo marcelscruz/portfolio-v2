@@ -5,7 +5,7 @@ const { maxOverallWidth, tabletWidth, phoneWidth } = sizes
 
 export const Container = styled.div`
     background: var(--primary);
-    min-height: 100vh;
+    min-height: calc(var(--vh) - 80px); /* Viewport height - header height */
     overflow-x: hidden;
     transition: var(--backgroundTransition);
 `
