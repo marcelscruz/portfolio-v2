@@ -6,16 +6,20 @@ const { phoneWidth } = sizes
 export const BlogEntryContent = styled.div`
     padding: 40px 0;
 
+    @media screen and (max-width: ${phoneWidth}) {
+        padding: 30px 0;
+    }
+
     ${({ isFirstOfType }) =>
         isFirstOfType &&
         `
-        padding-top: 0;
+        padding-top: 0 !important;
     `}
 
     ${({ isLastOfType }) =>
         isLastOfType &&
         `
-        padding-bottom: 0;
+        padding-bottom: 0 !important;
     `}
 
     ${({ isLastOfType }) =>
@@ -24,9 +28,7 @@ export const BlogEntryContent = styled.div`
         border-bottom: 1px dashed var(--primary-low-opacity);
     `}
 
-    @media screen and (max-width: ${phoneWidth}) {
-        padding: 30px 0;
-    }
+    
 `
 
 export const BlogEntryTitle = styled.h2`
