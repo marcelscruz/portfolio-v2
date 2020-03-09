@@ -1,5 +1,4 @@
 export * from './global-styles'
 export * from './general-configuration'
-export * from './fonts'
 export * from './prism'
 export * from './variables'
