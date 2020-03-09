@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { sizes } from 'constants/sizes'
 
-const { tabletWidth, phoneWidth } = sizes
+const { tabletWidth, phoneWidth, phoneHeight } = sizes
 
 export const Container = styled.div`
     display: flex;
@@ -10,7 +10,7 @@ export const Container = styled.div`
     position: relative;
     width: 100vw;
 
-    @media screen and (max-width: ${tabletWidth}) {
+    @media screen and (max-width: ${phoneWidth}) {
         flex-direction: column;
     }
 `
@@ -21,7 +21,7 @@ export const LeftPanel = styled.div`
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
-    padding: 50px 0 50px;
+    padding: 50px 0;
     text-align: left;
 
     @media screen and (max-width: ${tabletWidth}) {
@@ -29,8 +29,13 @@ export const LeftPanel = styled.div`
         padding: 20px 0;
     }
 
+    /* iPhone 5 */
     @media screen and (max-width: 320px) {
         height: 35%;
+    }
+
+    @media screen and (max-height: ${phoneHeight}) {
+        padding: 0 0 20px;
     }
 `
 
@@ -48,6 +53,11 @@ export const Title = styled.h1`
         font-size: 48px;
         margin: 0;
         margin-bottom: 20px;
+    }
+
+    @media screen and (max-height: ${phoneHeight}) {
+        font-size: 38px;
+        margin: 0 0 20px;
     }
 `
 
@@ -75,6 +85,10 @@ export const TitleHighlight = styled.span`
     @media screen and (max-width: ${tabletWidth}) {
         font-size: 58px;
     }
+
+    @media screen and (max-height: ${phoneHeight}) {
+        font-size: 48px;
+    }
 `
 
 export const Subtitle = styled.h2`
@@ -93,6 +107,15 @@ export const Subtitle = styled.h2`
     @media screen and (max-width: ${phoneWidth}) {
         font-size: 18px;
     }
+
+    @media screen and (max-height: ${phoneHeight}) {
+        font-size: 18px;
+    }
+
+    /* iPhone 5 */
+    @media screen and (max-height: 350px) {
+        font-size: 14px;
+    }
 `
 
 export const RightPanel = styled.div`
@@ -104,7 +127,7 @@ export const RightPanel = styled.div`
     right: 0;
     width: 70%;
 
-    @media screen and (max-width: ${tabletWidth}) {
+    @media screen and (max-width: ${phoneWidth}) {
         clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0 41%);
         left: -60px; /* Layout Content left padding */
         position: relative;
