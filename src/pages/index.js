@@ -47,16 +47,16 @@ const Home = () => {
                 </div>
 
                 <SocialMediaContainer>
-                    <SocialMediaIcon href="https://www.linkedin.com/in/marcelscruz/">
-                        <FontAwesomeIcon style={svgSize} icon={faLinkedin} />
+                    <SocialMediaIcon href="https://twitter.com/marcelcruz">
+                        <FontAwesomeIcon style={svgSize} icon={faTwitter} />
                     </SocialMediaIcon>
 
                     <SocialMediaIcon href="https://github.com/marcelscruz">
                         <FontAwesomeIcon style={svgSize} icon={faGithub} />
                     </SocialMediaIcon>
 
-                    <SocialMediaIcon href="https://twitter.com/marcelcruz">
-                        <FontAwesomeIcon style={svgSize} icon={faTwitter} />
+                    <SocialMediaIcon href="https://www.linkedin.com/in/marcelscruz/">
+                        <FontAwesomeIcon style={svgSize} icon={faLinkedin} />
                     </SocialMediaIcon>
 
                     <SocialMediaIcon href="mailto:marcelcruz@live.com">
