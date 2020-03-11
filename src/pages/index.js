@@ -59,7 +59,7 @@ const Home = () => {
                         <FontAwesomeIcon style={svgSize} icon={faLinkedin} />
                     </SocialMediaIcon>
 
-                    <SocialMediaIcon href="mailto:marcelcruz@live.com">
+                    <SocialMediaIcon href="mailto:me@marcelcruz.dev">
                         <FontAwesomeIcon style={svgSize} icon={faEnvelope} />
                     </SocialMediaIcon>
                 </SocialMediaContainer>
