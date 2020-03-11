@@ -20,6 +20,7 @@ const ThemeToggle = ({ isDarkModeOn, setIsDarkModeOn }) => {
         <IconWrapper
             isDarkModeOn={isOn}
             onClick={toggleColorMode}
+            onMouseDown={e => e.preventDefault()} // Doesn't allow outline (focus) when clicked
             data-a11y="false"
             aria-label={isOn ? 'Activate light mode' : 'Activate dark mode'}
         >
