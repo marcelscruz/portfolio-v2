@@ -12,15 +12,17 @@ const ThemeToggle = ({ isDarkModeOn, setIsDarkModeOn }) => {
         setIsOn(isDarkModeOn)
     }, [isDarkModeOn])
 
-    function toggleColorMode() {
+    function toggleColorMode(e) {
+        e.preventDefault() // Doesn't allow outline (focus) when clicked
+
         setIsDarkModeOn(!isDarkModeOn)
     }
 
     return (
         <IconWrapper
             isDarkModeOn={isOn}
-            onClick={toggleColorMode}
-            onMouseDown={e => e.preventDefault()} // Doesn't allow outline (focus) when clicked
+            onMouseDown={toggleColorMode}
+            onTouchEnd={toggleColorMode}
             data-a11y="false"
             aria-label={isOn ? 'Activate light mode' : 'Activate dark mode'}
         >

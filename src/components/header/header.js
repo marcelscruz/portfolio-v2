@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { navigate } from 'gatsby'
 import ThemeToggle from '../theme-toggle/theme-toggle'
 import {
     Container,
@@ -21,7 +22,16 @@ export const Header = props => {
                     </Title>
                 </LeftContainer>
                 <RightContainer>
-                    <MenuLink to="/blog">Blog</MenuLink>
+                    <MenuLink
+                        to="/blog"
+                        onTouchEnd={e => {
+                            e.preventDefault() // Doesn't allow outline (focus) when clicked
+
+                            navigate('/blog')
+                        }}
+                    >
+                        Blog
+                    </MenuLink>
                     <ThemeToggle {...props} />
                 </RightContainer>
             </InnerContainer>
