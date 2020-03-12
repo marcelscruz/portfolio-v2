@@ -29,9 +29,17 @@ export const LeftPanel = styled.div`
         padding: 20px 0;
     }
 
+    @media screen and (max-width: ${phoneWidth}) {
+        flex: 1;
+        height: unset;
+        padding: 0;
+        padding-top: 20px;
+    }
+
     /* iPhone 5 */
     @media screen and (max-width: 320px) {
         height: 35%;
+        padding-top: 10px;
     }
 
     @media screen and (max-height: ${phoneHeight}) {
@@ -52,6 +60,11 @@ export const Title = styled.h1`
         font-size: 48px;
         margin: 0;
         margin-bottom: 20px;
+    }
+
+    /* iPhone 5 */
+    @media screen and (max-width: 320px) {
+        font-size: 38px;
     }
 
     @media screen and (max-height: ${phoneHeight}) {
@@ -84,6 +97,11 @@ export const TitleHighlight = styled.span`
         font-size: 58px;
     }
 
+    /* iPhone 5 */
+    @media screen and (max-width: 320px) {
+        font-size: 48px;
+    }
+
     @media screen and (max-height: ${phoneHeight}) {
         font-size: 48px;
     }
@@ -111,7 +129,7 @@ export const Subtitle = styled.h2`
     }
 
     /* iPhone 5 */
-    @media screen and (max-height: 350px) {
+    @media screen and (max-width: 320px) {
         font-size: 14px;
     }
 `
@@ -133,6 +151,8 @@ export const RightPanel = styled.div`
     }
 
     @media screen and (max-width: ${phoneWidth}) {
+        flex: 2;
+        height: unset;
         left: -20px; /* Layout Content left padding */
     }
 `
