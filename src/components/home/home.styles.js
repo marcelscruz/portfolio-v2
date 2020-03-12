@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { sizes } from 'constants/sizes'
 
-const { tabletWidth, phoneWidth, phoneHeight } = sizes
+const { tabletWidth, phoneWidth, iPhone5Width, phoneHeight } = sizes
 
 export const Container = styled.div`
     display: flex;
@@ -36,8 +36,7 @@ export const LeftPanel = styled.div`
         padding-top: 20px;
     }
 
-    /* iPhone 5 */
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: ${iPhone5Width}) {
         height: 35%;
         padding-top: 10px;
     }
@@ -62,8 +61,7 @@ export const Title = styled.h1`
         margin-bottom: 20px;
     }
 
-    /* iPhone 5 */
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: ${iPhone5Width}) {
         font-size: 38px;
     }
 
@@ -97,8 +95,7 @@ export const TitleHighlight = styled.span`
         font-size: 58px;
     }
 
-    /* iPhone 5 */
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: ${iPhone5Width}) {
         font-size: 48px;
     }
 
@@ -128,8 +125,7 @@ export const Subtitle = styled.h2`
         font-size: 18px;
     }
 
-    /* iPhone 5 */
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: ${iPhone5Width}) {
         font-size: 14px;
     }
 `
