@@ -1,11 +1,4 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-    faGithub,
-    faLinkedin,
-    faTwitter,
-} from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {
     Container,
     LeftPanel,
@@ -15,16 +8,11 @@ import {
     RightPanel,
     Image,
     SocialMediaContainer,
-    SocialMediaIcon,
+    SocialMedia,
 } from 'components'
 import me from 'images/me.jpg'
 
 const Home = () => {
-    const svgSize = {
-        height: '18px',
-        width: '18px',
-    }
-
     return (
         <Container>
             <LeftPanel>
@@ -47,21 +35,7 @@ const Home = () => {
                 </div>
 
                 <SocialMediaContainer>
-                    <SocialMediaIcon href="https://twitter.com/marcelcruz">
-                        <FontAwesomeIcon style={svgSize} icon={faTwitter} />
-                    </SocialMediaIcon>
-
-                    <SocialMediaIcon href="https://github.com/marcelscruz">
-                        <FontAwesomeIcon style={svgSize} icon={faGithub} />
-                    </SocialMediaIcon>
-
-                    <SocialMediaIcon href="https://www.linkedin.com/in/marcelscruz/">
-                        <FontAwesomeIcon style={svgSize} icon={faLinkedin} />
-                    </SocialMediaIcon>
-
-                    <SocialMediaIcon href="mailto:me@marcelcruz.dev">
-                        <FontAwesomeIcon style={svgSize} icon={faEnvelope} />
-                    </SocialMediaIcon>
+                    <SocialMedia />
                 </SocialMediaContainer>
             </LeftPanel>
 
