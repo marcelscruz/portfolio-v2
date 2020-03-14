@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { sizes } from 'constants/sizes'
 
-const { phoneWidth, phoneHeight } = sizes
+const { phoneWidth } = sizes
 
 export const SocialMediaIcon = styled.a.attrs({
     rel: 'noopener noreferrer',
@@ -21,10 +21,6 @@ export const SocialMediaIcon = styled.a.attrs({
 
         @media screen and (max-width: ${phoneWidth}) {
             color: var(--light-primary);
-        }
-
-        @media screen and (max-height: ${phoneHeight}) {
-            color: var(--secondary);
         }
     }
 `

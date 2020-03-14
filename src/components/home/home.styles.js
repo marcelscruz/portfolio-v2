@@ -33,7 +33,7 @@ export const LeftPanel = styled.div`
         flex: 1;
         height: unset;
         padding: 0;
-        padding-top: 20px;
+        justify-content: center;
     }
 
     @media screen and (max-width: ${iPhone5Width}) {
@@ -140,16 +140,12 @@ export const RightPanel = styled.div`
     width: 70%;
 
     @media screen and (max-width: ${phoneWidth}) {
-        clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0 41%);
-        left: -60px; /* Layout Content left padding */
-        position: relative;
-        width: 100vw;
-    }
-
-    @media screen and (max-width: ${phoneWidth}) {
-        flex: 2;
+        clip-path: unset;
+        flex: 1;
         height: unset;
         left: -20px; /* Layout Content left padding */
+        position: relative;
+        width: 100vw;
     }
 `
 
@@ -161,6 +157,10 @@ export const Image = styled.img`
 
     @media screen and (max-width: ${tabletWidth}) {
         height: 70%;
+    }
+
+    @media screen and (max-width: ${phoneWidth}) {
+        height: 90%;
     }
 `
 
