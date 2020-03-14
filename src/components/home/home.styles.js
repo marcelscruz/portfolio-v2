@@ -18,6 +18,7 @@ export const Container = styled.div`
 export const LeftPanel = styled.div`
     align-items: flex-start;
     display: flex;
+    flex: 1;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
@@ -132,8 +133,9 @@ export const Subtitle = styled.h2`
 
 export const RightPanel = styled.div`
     background-color: var(--dark-primary);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
     display: flex;
+    flex: 3;
     height: 100%;
     justify-content: center;
     right: 0;
@@ -151,7 +153,7 @@ export const RightPanel = styled.div`
 
 export const Image = styled.img`
     bottom: 0;
-    height: 100%;
+    height: 80%;
     object-fit: cover;
     position: absolute;
 
