@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import { Header, FadeIn } from 'components'
+import { Header, FadeIn, UnderConstruction } from 'components'
 import { GlobalStyle } from 'styles'
 import { Container, Content } from './layout.styles'
 import { useDarkMode } from 'hooks'
@@ -19,6 +19,7 @@ export const Layout = ({ children }) => {
             <GlobalStyle />
             <Helmet title="marcel cruz • web developer" />
             <Container>
+                <UnderConstruction />
                 <Header
                     isDarkModeOn={isDarkModeOn}
                     setIsDarkModeOn={setIsDarkModeOn}
