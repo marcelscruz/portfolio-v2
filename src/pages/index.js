@@ -28,7 +28,7 @@ const Home = () => {
                     <br />
 
                     <Subtitle>
-                        I<span>'</span>m a full stack developer
+                        I<span>'</span>m a full-stack developer
                         <span>,</span> writing clean and efficient code
                         <span>.</span>
                     </Subtitle>
