@@ -30,7 +30,7 @@ const Home = () => {
                     <Subtitle>
                         I<span>'</span>m a full-stack developer
                         <span>,</span> writing clean and efficient code
-                        <span>!</span>
+                        <span>.</span>
                     </Subtitle>
                 </div>
 
