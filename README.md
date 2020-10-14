@@ -1,6 +1,6 @@
 # Marcel's Portfolio V2
 
-This is my personal portfolio, V2.
+This is my personal portfolio, now on V2.
 
 ## Configuration
 
