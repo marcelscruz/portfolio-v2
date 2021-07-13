@@ -56,29 +56,36 @@ export const Title = styled.h1`
     margin: 50px 0;
     transition: var(--colorTransition);
 
-    @media screen and (max-width: ${phoneWidth}) {
+    /* @media screen and (max-width: ${phoneWidth}) {
         font-size: 48px;
         margin: 0;
         margin-bottom: 20px;
+    } */
+
+    @media screen and (max-width: ${tabletWidth}) {
+        font-size: 10vw;
+    }
+
+    /* @media screen and (max-width: ${tabletWidth}) {
+        font-size: 58px;
+    }
+
+    @media screen and (max-width: ${phoneWidth}) {
+        font-size: 36px;
     }
 
     @media screen and (max-width: ${iPhone5Width}) {
-        font-size: 38px;
-    }
-
-    @media screen and (max-height: ${phoneHeight}) {
-        font-size: 38px;
-        margin: 20px 0;
-    }
+        font-size: 30px;
+    } */
 `
 
 export const TitleHighlight = styled.span`
     color: var(--yellow);
-    font-size: 78px;
+    font-size: 100px;
     font-weight: 500;
     margin: 0 5px;
     position: relative;
-    top: 5px;
+    top: 8px;
 
     ${({ noMarginLeft }) =>
         noMarginLeft &&
@@ -93,16 +100,20 @@ export const TitleHighlight = styled.span`
         `}
 
     @media screen and (max-width: ${tabletWidth}) {
-        font-size: 58px;
+        font-size: 16vw;
+    }
+
+    /* @media screen and (max-width: ${tabletWidth}) {
+        font-size: 90px;
+    }
+
+    @media screen and (max-width: ${phoneWidth}) {
+        font-size: 68px;
     }
 
     @media screen and (max-width: ${iPhone5Width}) {
-        font-size: 48px;
-    }
-
-    @media screen and (max-height: ${phoneHeight}) {
-        font-size: 48px;
-    }
+        font-size: 62px;
+    } */
 `
 
 export const Subtitle = styled.h2`

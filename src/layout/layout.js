@@ -1,14 +1,22 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import { Header, FadeIn, UnderConstruction } from 'components'
+import {
+    // Header,
+    // FadeIn,
+    // UnderConstruction,
+    Title,
+    TitleHighlight,
+    SocialMediaContainer,
+    SocialMedia,
+} from 'components'
 import { GlobalStyle } from 'styles'
-import { Container, Content } from './layout.styles'
-import { useDarkMode } from 'hooks'
+// import { Container, Content } from './layout.styles'
+// import { useDarkMode } from 'hooks'
 import getViewportHeight from 'utils/get-viewport-height'
 
 export const Layout = ({ children }) => {
-    const [isDarkModeOn, setIsDarkModeOn] = useDarkMode()
+    // const [isDarkModeOn, setIsDarkModeOn] = useDarkMode()
 
     useEffect(() => {
         getViewportHeight()
@@ -17,8 +25,38 @@ export const Layout = ({ children }) => {
     return (
         <>
             <GlobalStyle />
-            <Helmet title="marcel cruz • web developer" />
-            <Container>
+            <Helmet title="Marcel Cruz • Full-Stack Developer" />
+
+            <div
+                style={{
+                    height: '100vh',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative',
+                    width: '100vw',
+                }}
+            >
+                <Title>
+                    <TitleHighlight noMarginLeft>&lt;</TitleHighlight>
+                    MarcelCruz/
+                    <TitleHighlight noMarginRight>&gt;</TitleHighlight>
+                </Title>
+
+                {/* <SocialMediaContainer> */}
+                <div
+                    style={{
+                        position: 'absolute',
+                        bottom: '40px',
+                        left: '80px',
+                    }}
+                >
+                    <SocialMedia />
+                </div>
+                {/* </SocialMediaContainer> */}
+            </div>
+
+            {/* <Container>
                 <UnderConstruction />
                 <Header
                     isDarkModeOn={isDarkModeOn}
@@ -27,7 +65,7 @@ export const Layout = ({ children }) => {
                 <Content>
                     <FadeIn>{children}</FadeIn>
                 </Content>
-            </Container>
+            </Container> */}
         </>
     )
 }

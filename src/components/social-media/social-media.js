@@ -28,9 +28,9 @@ export const SocialMedia = () => {
                 <FontAwesomeIcon style={svgSize} icon={faLinkedin} />
             </SocialMediaIcon>
 
-            <SocialMediaIcon href="mailto:marcelcruz@live.com">
+            {/* <SocialMediaIcon href="mailto:marcelcruz@live.com">
                 <FontAwesomeIcon style={svgSize} icon={faEnvelope} />
-            </SocialMediaIcon>
+            </SocialMediaIcon> */}
         </>
     )
 }
