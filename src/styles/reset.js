@@ -9,8 +9,9 @@ export const reset = `
         margin: 0;
         // -webkit-font-smoothing: antialiased;
         // -moz-osx-font-smoothing: grayscale;
-        font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'Roboto',
-            'Segoe UI', Helvetica, Arial, sans-serif;
+        // font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'Roboto',
+        //     'Segoe UI', Helvetica, Arial, sans-serif;
+        font-family: 'Roboto Mono', monospace;
         font-size: 1rem;
         font-weight: 600;
         line-height: 1.54;

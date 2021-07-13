@@ -51,7 +51,7 @@ export const Title = styled.h1`
     color: var(--secondary);
     display: inline-block;
     font-size: 68px;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     line-height: 1;
     margin: 50px 0;
     transition: var(--colorTransition);
